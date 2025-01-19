@@ -34,25 +34,29 @@
       display: block;
       margin: 0 auto 20px;
     }
-    .btn {
-      border: 1px solid #ddd;
-      background: #fff;
-      color: rgb(120, 0, 0);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin: 5px;
-      min-width: 120px;
-    }
-    .btn:hover {
-      background: #f8f9fa;
-    }
+
+    /* Navigation Links */
     .nav-buttons {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
       margin-top: 20px;
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      border-bottom: 2px solid #ddd;
     }
+    .nav-buttons a {
+      font-weight: bold;
+      color: rgb(120, 0, 0);
+      text-decoration: none;
+      padding: 10px 15px;
+      transition: all 0.3s ease;
+    }
+    .nav-buttons a:hover {
+      color: #fff;
+      background-color: #B02A30;
+    }
+
     .footer-icons {
       display: flex;
       justify-content: center;
@@ -83,6 +87,11 @@
       max-width: 170px; /* Limit maximum width */
     }
 
+    /* Remove the rounded corners */
+    .p-4.border {
+      border-radius: 0; /* Remove rounded corners */
+    }
+
     @media (max-width: 768px) {
       .col-md-8, .col-md-4 {
         flex: 0 0 100%; /* Stack the columns on small screens */
@@ -91,8 +100,16 @@
   </style>
 </head>
 <body>
+  <!-- Navigation Section (Now at the top) -->
+  <div class="nav-buttons">
+    <a href="index.html">Home</a>
+    <a href="article.html">Journalism</a>
+    <a href="media.html">Media</a>
+    <a href="Resume/Somaiyah%20Hafeez%20Resume.docx" download>Resume</a>
+  </div>
+
   <div class="container py-5">
-    <div class="p-4 border rounded-3 shadow-lg" style="background-color: #ffffff;">
+    <div class="p-4 border shadow-lg" style="background-color: #ffffff;">
       <!-- Main content -->
       <div class="row align-items-start">
         <!-- Text content -->
@@ -112,25 +129,13 @@
             My <a href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" class="bold-link">data-driven investigation on enforced disappearances in Balochistan</a>, the largest province of Pakistan, resulted in me being a 
             finalist for <a href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/" class="bold-link">Thomson Foundation's Young Journalist Award in 2024.</a>
           </p>
-          <p>
-            I'm on Twitter as <a href="https://twitter.com/sommulbaloch" class="bold-link">@sommulbaloch</a> and you can email me <a href="mailto:sh4625@columbia.edu" class="bold-link">here.</a>
-            You can also reach me on <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" class="bold-link">LinkedIn.</a>
-          </p>
         </div>
-        <!-- Image and navigation column -->
+        <!-- Image column -->
         <div class="col-md-4">
           <div class="text-center">
             <img src="images/Somaiyah.jpeg" alt="Somaiyah Hafeez" class="profile-img mb-3">
           </div>
         </div>
-      </div>
-
-      <!-- New Navigation Tools in Line Above Footer (Only Above Footer Now) -->
-      <div class="nav-buttons">
-        <a href="#" class="btn">Home</a>
-        <a href="article.html" class="btn">Journalism</a>
-        <a href="#" class="btn">Media</a>
-        <a href="Resume/Somaiyah%20Hafeez%20Resume.docx" download class="btn">Resume</a>
       </div>
 
       <!-- Footer Icons -->
