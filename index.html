@@ -9,102 +9,118 @@
   <link rel="icon" type="image/png" href="images/icons8-popcorn-96.png" />
   <script src="https://kit.fontawesome.com/6630dd9732.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif !important;
-      line-height: 1.6;
-    }
-    h1 {
-      font-weight: 600;
-    }
-    p, a, button {
-      font-weight: 400;
-    }
-    .bold-link {
-      color: rgb(120, 0, 0); /* Ruby color */
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn {
-      border: none;
-      background: none;
-      color: rgb(120, 0, 0);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0;
-    }
-    .btn:hover {
-      text-decoration: underline;
-      color: rgb(120, 0, 0);
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Somaiyah Hafeez</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="article.html">Published Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Resume/Somaiyah%20Hafeez%20Resume.docx" download>Resume</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container d-flex justify-content-center py-5">
-    <!-- Start of the card-like box -->
-    <div class="p-4 border rounded-3 shadow-lg" style="max-width: 800px; background-color: #ffffff;">
-      <div class="d-flex flex-column flex-md-row-reverse align-items-center">
-        <!-- Image Section -->
-        <img src="images/Somaiyah.jpeg" alt="Somaiyah Hafeez" class="rounded ms-md-4 mb-3 mb-md-0" style="width: 150px; height: auto;">
-        <!-- Text Section -->
-        <div>
-          <h1>Somaiyah Hafeez</h1>
-          <p class="lead" style="font-size: 1.25rem;">Data journalist and reporter based in New York City.</p>
-          <p>
-            I am currently pursuing a master's in Data Journalism from Columbia Journalism School. I will be graduating in August 2025 from the program and will be open to work. 
-            Prior to this, I worked as a freelance journalist for more than a dozen national and international news outlets. 
-            I have reported on human rights, climate change, politics, and more for 
-            <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" class="bold-link">The Guardian</a>, 
-            <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" class="bold-link">New Lines Magazine</a>, 
-            <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" class="bold-link">The New Humanitarian</a>, and 
-            <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" class="bold-link">The Diplomat</a>, to name some.
-          </p>
-          <p>
-            My <a href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" class="bold-link">data-driven investigation on enforced disappearances in Balochistan</a>, the largest province of Pakistan, resulted in me being a 
-            finalist for <a href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/" class="bold-link">Thomson Foundation's Young Journalist Award in 2024.</a>
-          </p>
-          <p>
-            I'm on Twitter as <a href="https://twitter.com/sommulbaloch" class="bold-link">@sommulbaloch</a> and you can email me <a href="mailto:sh4625@columbia.edu" class="bold-link">here.</a>
-            You can also reach me on <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" class="bold-link">LinkedIn.</a>
-          </p>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif !important;
+        line-height: 1.6;
+      }
+      h1 {
+        font-weight: 600;
+        color: #B02A30;
+      }
+      p, a, button {
+        font-weight: 400;
+      }
+      .bold-link {
+        color: rgb(120, 0, 0);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .profile-img {
+        width: 170px;  
+        height: 250px; 
+        border-radius: 8px; /* Slight curve instead of circle */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+      }
+      .btn {
+        border: 1px solid #ddd;
+        background: #fff;
+        color: rgb(120, 0, 0);
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 5px;
+        min-width: 120px;
+      }
+      .btn:hover {
+        background: #f8f9fa;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .footer-icons a {
+        color: #333;
+        text-decoration: none;
+      }
+      .footer-icons a:hover {
+        color: #B02A30;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="p-4 border rounded-3 shadow-lg" style="background-color: #ffffff;">
+        <!-- Main content -->
+        <div class="row align-items-start">
+          <!-- Text content -->
+          <div class="col-md-8">
+            <h1>Somaiyah Hafeez</h1>
+            <p class="lead" style="font-size: 1.25rem;">Data journalist and reporter based in New York City.</p>
+            <p>
+              I am currently pursuing a master's in Data Journalism from Columbia Journalism School. I will be graduating in August 2025 from the program and will be open to work. 
+              Prior to this, I worked as a freelance journalist for more than a dozen national and international news outlets. 
+              I have reported on human rights, climate change, politics, and more for 
+              <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" class="bold-link">The Guardian</a>, 
+              <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" class="bold-link">New Lines Magazine</a>, 
+              <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" class="bold-link">The New Humanitarian</a>, and 
+              <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" class="bold-link">The Diplomat</a>, to name some.
+            </p>
+            <p>
+              My <a href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" class="bold-link">data-driven investigation on enforced disappearances in Balochistan</a>, the largest province of Pakistan, resulted in me being a 
+              finalist for <a href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/" class="bold-link">Thomson Foundation's Young Journalist Award in 2024.</a>
+            </p>
+            <p>
+              I'm on Twitter as <a href="https://twitter.com/sommulbaloch" class="bold-link">@sommulbaloch</a> and you can email me <a href="mailto:sh4625@columbia.edu" class="bold-link">here.</a>
+              You can also reach me on <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" class="bold-link">LinkedIn.</a>
+            </p>
+          </div>
+          <!-- Image and navigation column -->
+          <div class="col-md-4">
+            <div class="text-center">
+              <img src="images/Somaiyah.jpeg" alt="Somaiyah Hafeez" class="profile-img mb-3">
+              <!-- Navigation buttons under the image -->
+              <div class="d-flex flex-column align-items-center">
+                <a href="#" class="btn">Home</a>
+                <a href="article.html" class="btn">Journalism</a>
+                <a href="#" class="btn">Media</a>
+                <a href="Resume/Somaiyah%20Hafeez%20Resume.docx" download class="btn">Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Footer Icons -->
+        <div class="footer-icons">
+          <a href="mailto:sh4625@columbia.edu"><i class="fa-brands fa-envelope fa-2x"></i></a>
+          <a href="https://github.com/somaiyahh"><i class="fa-brands fa-github fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+          <a href="https://x.com/sommulbaloch"><i class="fa-brands fa-twitter fa-2x"></i></a>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Bootstrap JS and Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  </body>
+  </html>
