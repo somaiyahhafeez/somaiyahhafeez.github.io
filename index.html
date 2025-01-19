@@ -66,6 +66,28 @@
       .footer-icons a:hover {
         color: #B02A30;
       }
+
+      /* Ensure the layout scales well on smaller screens */
+     .container {
+    max-width: 960px; /* Adjust to control the maximum width */
+    padding: 0 15px; /* Ensure there is still padding on smaller screens */
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      /* Adjust the profile image size */
+      .profile-img {
+        width: 100%; /* Make it responsive */
+        max-width: 170px; /* Limit maximum width */
+      }
+      
+      @media (max-width: 768px) {
+        .col-md-8, .col-md-4 {
+          flex: 0 0 100%; /* Stack the columns on small screens */
+        }
+      }
     </style>
   </head>
   <body>
@@ -123,4 +145,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   </body>
-  </html>
+</html>
