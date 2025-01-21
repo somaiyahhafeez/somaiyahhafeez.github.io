@@ -29,13 +29,13 @@
     .profile-img {
       width: 170px;  
       height: 250px; 
-      border-radius: 8px; /* Slight curve instead of circle */
+      border-radius: 8px; 
       object-fit: cover;
       display: block;
       margin: 0 auto 20px;
     }
 
-    /* Navigation Links */
+
     .nav-buttons {
       display: flex;
       justify-content: center;
@@ -71,36 +71,35 @@
       color: #B02A30;
     }
 
-    /* Ensure the layout scales well on smaller screens */
     .container {
-      max-width: 960px; /* Adjust to control the maximum width */
-      padding: 0 15px; /* Ensure there is still padding on smaller screens */
+      max-width: 960px; 
+      padding: 0 15px; 
     }
     .row {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    /* Adjust the profile image size */
+  
     .profile-img {
-      width: 100%; /* Make it responsive */
-      max-width: 170px; /* Limit maximum width */
+      width: 100%; 
+      max-width: 170px; 
     }
 
-    /* Remove the rounded corners */
+
     .p-4.border {
-      border-radius: 0; /* Remove rounded corners */
+      border-radius: 0; 
     }
 
     @media (max-width: 768px) {
       .col-md-8, .col-md-4 {
-        flex: 0 0 100%; /* Stack the columns on small screens */
+        flex: 0 0 100%; 
       }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation Section (Now at the top) -->
+  <!-- Navigation Section  -->
   <div class="nav-buttons">
     <a href="index.html">Home</a>
     <a href="article.html">Journalism</a>
