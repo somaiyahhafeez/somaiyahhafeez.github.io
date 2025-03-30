@@ -29,8 +29,7 @@
     .project-card:hover {
       transform: translateY(-5px);
     }
-    a
-    {
+    a {
       color: #B02A30;
       text-decoration: none;
       font-weight: bold;
@@ -95,40 +94,69 @@
     }
     .header-section {
       display: flex;
-      margin-bottom: 2rem;
+      align-items: center;
+      margin-bottom: 20px;
     }
-    .name-section {
-      width: 30%;
-      padding-right: 2rem;
-    }
-    .name-section h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .bio-section {
-      width: 70%;
+    .header-text {
+      margin-left: 20px;
     }
     .social-icons {
       display: flex;
       gap: 15px;
       margin-top: 10px;
     }
-    .social-icons a {
-      color: #B02A30;
-      font-size: 1.2rem;
-    }
-    .social-icons a:hover {
-      color: #8a1f24;
+    
+    @media (max-width: 768px) {
+      .header-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .header-text {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+      
+      .social-icons {
+        justify-content: center;
+      }
+      
+      .project-card img {
+        height: 200px; 
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .lead {
+        font-size: 1.1rem !important; 
+      }
+      
+   
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      @media (max-width: 576px) {
+        .project-skills {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        .project-card-content {
+          padding: 12px;
+        }
+      }
     }
   </style>
 </head>
 <body>
 <div class="container py-5">
   <div class="header-section">
-    <div class="name-section">
-      <h1>Somaiyah<br>Hafeez</h1>
+    <div>
+      <h1>Somaiyah Hafeez</h1>
       <div class="social-icons">
         <a href="mailto:sh4625@columbia.edu"><i class="fa-solid fa-envelope"></i></a>
         <a href="https://github.com/somaiyahh"><i class="fa-brands fa-github"></i></a>
@@ -136,11 +164,10 @@
         <a href="https://x.com/sommulbaloch"><i class="fa-brands fa-twitter"></i></a>
       </div>
     </div>
-    <div class="bio-section">
+    <div class="header-text">
       <p class="lead" style="font-size: 1.25rem;">Data journalist and reporter based in New York City.</p>
       <p>
         Currently pursuing a master's in Data Journalism from Columbia Journalism School. 
-        Prior to this, worked as a freelance journalist for more than a dozen national and international news outlets. 
         Reported on human rights, climate change, politics, and more for 
         <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" class="bold-link">The Guardian</a>, 
         <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" class="bold-link">New Lines Magazine</a>, 
@@ -153,7 +180,6 @@
       </p>
     </div>
   </div>
-  
   <!-- Data Stories Section -->
   <div class="row">
     <div class="col-12 mb-4">
@@ -222,7 +248,7 @@
           <div class="project-card h-100">
             <img src="images/3984.jpg" alt="House of Love Article">
             <div class="project-card-content">
-              <h4>'House of love': the calm, creative space changing young lives in Karachi</h4>
+              <h4>‘House of love’: the calm, creative space changing young lives in Karachi</h4>
               <p>In Lyari, a slum notorious for violence, Mehr Ghar offers young people a safe place.</p>
               <div class="project-skills">
                 <span>Narrative Journalism</span>
@@ -258,7 +284,7 @@
             <img src="images/courier-newsroom-1.jpg" alt="Courier Newsroom Article">
             <div class="project-card-content">
               <h4>Courier Newsroom Spent Big on a Meta Ad Blitz in October</h4>
-              <p>The $6 million–plus the progressive 'newsroom' spent on Meta lagged only the official Trump and Harris campaigns.</p>
+              <p>The $6 million–plus the progressive ‘newsroom’ spent on Meta lagged only the official Trump and Harris campaigns.</p>
               <div class="project-skills">
                 <span>Python</span>
                 <span>Data Analysis</span>
@@ -275,7 +301,7 @@
             <img src="images/M116-1-800x365.jpg" alt="M116 Bus Article">
             <div class="project-card-content">
               <h4>The MTA Halts Free Crosstown M116 Bus Service Uptown></h4>
-              <p>The only free bus in East Harlem reimposes fares after the state fails to renew the MTA's pilot program.</p>
+              <p>The only free bus in East Harlem reimposes fares after the state fails to renew the MTA’s pilot program.</p>
               <div class="project-skills">
                 <span>Local Reporting</span>
                 <span>Transportation</span>
@@ -292,7 +318,7 @@
             <img src="images/community-board.jpg" alt="Community Board Article">
             <div class="project-card-content">
               <h4>Manhattan Community Board 9 Votes in Favor Of Universal Daylighting</h4>
-              <p>CB9 becomes the city's 18th community board in New York City to pass a resolution supporting Universal Daylighting, a state law promoting road safety</p>
+              <p>CB9 becomes the city’s 18th community board in New York City to pass a resolution supporting Universal Daylighting, a state law promoting road safety</p>
               <div class="project-skills">
                 <span>Community Reporting</span>
               </div>
@@ -379,7 +405,7 @@
             <img src="images/rahmat-zaman.jpg" alt="Afghan Refugees Article">
             <div class="project-card-content">
               <h4>Afghan Refugees Born in Pakistan Are Leaving Their Lives for the Unknown</h4>
-              <p>As 'unauthorized' refugees are forced to cross the border, many lament being sent to a country they know nothing about</p>
+              <p>As ‘unauthorized’ refugees are forced to cross the border, many lament being sent to a country they know nothing about</p>
               <div class="project-skills">
                 <span>Migration Reporting</span>
                 <span>Human Rights</span>
@@ -414,7 +440,7 @@
             <img src="images/climate-housing.jpg" alt="Climate Housing Article">
             <div class="project-card-content">
               <h4>After successive floods, Pakistan is forced to consider resilient housing</h4>
-              <p>As millions rebuild their homes in the wake of the devastating 2022 floods, an architect's innovative model for flood-resilient homes shows the way</p>
+              <p>As millions rebuild their homes in the wake of the devastating 2022 floods, an architect’s innovative model for flood-resilient homes shows the way</p>
               <div class="project-skills">
                 <span>Climate Reporting</span>
                 <span>Sustainable Design</span>
@@ -431,7 +457,7 @@
             <img src="images/economic-new-lines.jpg" alt="Economic Crisis Article">
             <div class="project-card-content">
               <h4>In Pakistan, an Economic Crisis Keeps Life on the Edge</h4>
-              <p>A combination of skyrocketing inflation and a plummeting currency has the world's fifth most populous country reeling</p>
+              <p>A combination of skyrocketing inflation and a plummeting currency has the world’s fifth most populous country reeling</p>
               <div class="project-skills">
                 <span>Economic Reporting</span>
                 <span>Social Impact</span>
@@ -446,6 +472,16 @@
       </div>
     </div>
   </div>
+
+
+</div>
+
+<!-- Footer with icons -->
+<div class="footer-icons">
+  <a href="mailto:sh4625@columbia.edu"><i class="fa-solid fa-envelope fa-2x"></i></a>
+  <a href="https://github.com/somaiyahh"><i class="fa-brands fa-github fa-2x"></i></a>
+  <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+  <a href="https://x.com/sommulbaloch"><i class="fa-brands fa-twitter fa-2x"></i></a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
