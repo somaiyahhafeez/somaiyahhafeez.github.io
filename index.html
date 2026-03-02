@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Somaiyah Hafeez — Data Journalist & Reporter</title>
-  <meta name="description" content="Portfolio of Somaiyah Hafeez — data journalist and reporter covering human rights, climate, immigration, and Balochistan.">
+
+  <title>Somaiyah Hafeez | Journalist & Data Reporter</title>
+  <meta name="description" content="Portfolio of Somaiyah Hafeez — journalist covering human rights, climate change, immigration, and balochistan.">
+  <meta name="author" content="Somaiyah Hafeez">
+
+  <meta property="og:title" content="Somaiyah Hafeez | Journalist & Data Reporter">
+  <meta property="og:description" content="journalist covering human rights, climate change, immigration, and balochistan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://somaiyahhafeez.github.io/">
+  <meta property="og:image" content="https://somaiyahhafeez.github.io/images/somaiyah_favicon.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Somaiyah Hafeez | Journalist & Data Reporter">
+  <meta name="twitter:description" content="Journalist covering human rights, climate change, immigration, and balochistan.">
+  <meta name="twitter:image" content="https://somaiyahhafeez.github.io/images/somaiyah_favicon.png">
+
+  <link rel="icon" type="image/png" href="images/somaiyah_favicon.png">
+  <link rel="shortcut icon" type="image/png" href="images/somaiyah_favicon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Somaiyah Hafeez",
+    "alternateName": "Somaiyah Hafeez journalist",
+    "jobTitle": "Data Journalist and Reporter",
+    "url": "https://somaiyahhafeez.github.io",
+    "sameAs": [
+      "https://github.com/somaiyahhafeez",
+      "https://www.linkedin.com/in/somaiyah-hafeez-520705269/",
+      "https://x.com/sommulbaloch"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Columbia University"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -260,11 +296,14 @@
     }
     .rc-card:hover .rc-img img { transform: scale(1.04); }
 
-    .rc-img--placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--paper);
+    .rc-img--video {
+      display: block;
+    }
+    .rc-img--video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .rc-img--placeholder span {
       font-family: var(--ff-mono);
@@ -710,7 +749,9 @@
         </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" target="_blank">
-          <div class="rc-img"><img src="images/snap.mov" alt="SNAP benefits freeze map"></div>
+          <div class="rc-img rc-img--video">
+            <video src="images/snap.mov" autoplay muted loop playsinline></video>
+          </div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Mapping</div>
             <h3>Interactive map shows impact of SNAP benefits freeze</h3>
@@ -728,7 +769,9 @@
         </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" target="_blank">
-          <div class="rc-img"><img src="images/mamdani.mov" alt="NYC borough flipped elections"></div>
+          <div class="rc-img rc-img--video">
+            <video src="images/mamdani.mov" autoplay muted loop playsinline></video>
+          </div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Elections</div>
             <h3>Inside the New York borough that flipped in elections</h3>
@@ -737,9 +780,7 @@
         </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/us-news/florida-sets-new-record-executions-1567022" target="_blank">
-          <div class="rc-img"><img src="images/executions.png" alt="Executions"></div>
-            <span>Florida Executions</span>
-          </div>
+          <div class="rc-img"><img src="images/executions.png" alt="Florida executions data"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Data Reporting</div>
             <h3>Florida sets new record for executions</h3>
@@ -748,9 +789,7 @@
         </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank">
-          <div class="rc-img"><img src="images/measles.png" alt="Measles"></div>
-            <span>Measles Outbreak</span>
-          </div>
+          <div class="rc-img"><img src="images/measles.png" alt="Measles cases by state"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Health Data</div>
             <h3>State reports highest number of measles cases</h3>
@@ -759,9 +798,7 @@
         </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/politics/us-behind-russia-nukes-data-1476456" target="_blank">
-          <div class="rc-img"><img src="images/nuclear.png" alt="Nuclear"></div>
-            <span>Nuclear Weapons Data</span>
-          </div>
+          <div class="rc-img"><img src="images/nuclear.png" alt="Nuclear weapons data"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Defense Data</div>
             <h3>US lags behind Russia in nuclear weapons, data shows</h3>
@@ -770,9 +807,7 @@
         </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/politics/stark-ice-data-shows-enormous-1471882" target="_blank">
-          <div class="rc-img"><img src="images/ice-illionois.png" alt="ICE illinois"></div>
-            <span>ICE Illinois Data</span>
-          </div>
+          <div class="rc-img"><img src="images/ice-illionois.png" alt="ICE Illinois arrests"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Data Analysis</div>
             <h3>ICE data shows surge in Illinois arrests — youngest detained aged 3</h3>
@@ -780,6 +815,14 @@
           </div>
         </a>
 
+        <a class="rc-card" href="https://www.themirror.com/news/politics/two-federal-agencies-gutted-hardest-1423721" target="_blank">
+          <div class="rc-img"><img src="images/Donald-Trump.png" alt="Federal agencies budget cuts"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Reporting</div>
+            <h3>Two federal agencies gutted hardest under recent budget cuts</h3>
+            <p>Investigated federal budget allocations and agencies most affected by cuts.</p>
+          </div>
+        </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/us-news/protesters-drive-500-miles-speak-1413546" target="_blank">
           <div class="rc-img"><img src="images/oct-7.jpg" alt="Protesters Oct 7 anniversary"></div>
@@ -787,6 +830,15 @@
             <div class="rc-kicker">The Mirror · Field Reporting</div>
             <h3>Protesters drive 500 miles to speak out</h3>
             <p>Reported on protests in New York City on the anniversary of Oct. 7.</p>
+          </div>
+        </a>
+
+        <a class="rc-card" href="https://www.irishstar.com/news/ireland-news/map-catherine-connolly-election-data-36133882" target="_blank">
+          <div class="rc-img"><img src="images/Texas-measles.png" alt="Catherine Connolly election map"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">Irish Star · Elections</div>
+            <h3>Map shows Catherine Connolly's election performance</h3>
+            <p>Constituency-level election results map breaking down voting patterns in Ireland.</p>
           </div>
         </a>
 
@@ -799,13 +851,17 @@
           </div>
         </a>
 
+      </div>
+    </div>
   </section>
 
   <!-- DATA PROJECTS -->
   <section id="data-projects">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Data Projects at J-School</span>
+        <span class="section-label">Data Projects</span>
+        <span class="section-sub">Investigative &amp; Longform</span>
+        <span class="section-count">4 Projects</span>
       </div>
 
       <div class="projects-grid">
@@ -844,8 +900,9 @@
   <section id="freelance">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Some of my freelance work</span>
+        <span class="section-label">Freelance Work</span>
         <span class="section-sub">International Publications</span>
+        <span class="section-count">12 Stories</span>
       </div>
 
       <div class="freelance-grid">
@@ -926,15 +983,15 @@
       <div class="video-grid">
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Young Journalist Award Finalist 2024: Somaiyah Hafeez, Pakistan</h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Featured Broadcast</h3>
         </div>
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Balochistan's Somaiyah Hafeez: Finalist for the Thomson Foundation Young Journalist Award - BBC URDU</h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Featured Broadcast</h3>
         </div>
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Balochistan's Long March Protest</h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Featured Broadcast</h3>
         </div>
       </div>
     </div>
