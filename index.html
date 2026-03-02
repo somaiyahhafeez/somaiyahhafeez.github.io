@@ -43,9 +43,11 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- CHANGE 1: Added Eczar for the name -->
   <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
+    /* ─── TOKENS ─── */
     :root {
       --cream: #f9f6f1;
       --paper: #f2ede4;
@@ -75,11 +77,13 @@
     a { color: inherit; text-decoration: none; }
     img { display: block; width: 100%; }
 
+    /* ─── TOP RULE ─── */
     .top-rule {
       height: 4px;
       background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
     }
 
+    /* ─── MASTHEAD ─── */
     .masthead {
       border-bottom: 1px solid var(--rule);
       padding: 0 clamp(1.5rem, 5vw, 6rem);
@@ -97,16 +101,15 @@
     }
 
     .masthead-date {
- .masthead-name {
-  font-family: var(--ff-sans);
-  font-size: 10px;
+      font-family: var(--ff-mono);
+      font-size: 10px;
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--mid);
     }
 
     .masthead-name {
-      font-family: 'Eczar', serif;
+      font-family: 'var(--ff-mono);
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 600;
       letter-spacing: -0.5px;
@@ -167,12 +170,14 @@
       border-bottom-color: var(--accent);
     }
 
+    /* ─── WRAPPER ─── */
     .wrap {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 clamp(1.5rem, 5vw, 6rem);
     }
 
+    /* ─── HERO ─── */
     .hero {
       padding: 3rem 0 2.5rem;
       border-bottom: 3px double var(--rule);
@@ -226,6 +231,7 @@
     .btn-filled { background: var(--accent); border-color: var(--accent); color: #fff; }
     .btn-filled:hover { background: #a8320e; border-color: #a8320e; color:#fff; }
 
+    /* ─── SECTION HEADER ─── */
     .section-header {
       display: flex;
       align-items: baseline;
@@ -257,6 +263,7 @@
       color: var(--mid);
     }
 
+    /* ─── REACH CARD GRID ─── */
     .reach-card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -281,6 +288,7 @@
       justify-content: center;
     }
 
+    /* CHANGE 3: contain so full chart shows, no cropping */
     .rc-img img {
       width: 100%; height: 100%;
       object-fit: contain;
@@ -416,6 +424,7 @@
       line-height: 1.5;
     }
 
+    /* ─── FREELANCE ─── */
     .freelance-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -461,6 +470,7 @@
       line-height: 1.5;
     }
 
+    /* ─── ACCOLADES STRIP ─── */
     .accolades-strip {
       background: var(--ink);
       color: var(--cream);
@@ -522,6 +532,7 @@
       line-height: 1.6;
     }
 
+    /* ─── VIDEO SECTION ─── */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -552,6 +563,7 @@
       color: var(--ink);
     }
 
+    /* ─── MISC CHARTS ─── */
     .charts-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -572,6 +584,7 @@
     }
     .chart-item:hover img { transform: scale(1.02); }
 
+    /* ─── FOOTER ─── */
     .site-footer {
       margin-top: 5rem;
       border-top: 3px double var(--rule);
@@ -622,6 +635,7 @@
 
     .footer-icons svg { width:16px; height:16px; fill:currentColor; }
 
+    /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from { opacity:0; transform:translateY(18px); }
       to   { opacity:1; transform:translateY(0); }
@@ -665,8 +679,10 @@
 </head>
 <body>
 
+  <!-- top rule -->
   <div class="top-rule"></div>
 
+  <!-- MASTHEAD -->
   <header class="masthead">
     <div class="masthead-inner">
       <span class="masthead-date">Data Journalist &amp; Reporter · New York City</span>
@@ -681,6 +697,7 @@
     </div>
   </header>
 
+  <!-- KICKER NAV -->
   <nav class="kicker-nav">
     <div class="kicker-nav-inner">
       <a href="#reach">Reach Plc</a>
@@ -692,6 +709,7 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero" id="about">
     <div class="wrap">
       <p class="hero-kicker">Columbia University · M.S. Data Journalism</p>
@@ -700,15 +718,16 @@
       </p>
       <div class="hero-cta-row">
         <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
-        <a href="sh4625@columbia.edu" class="btn">Get in Touch</a>
+        <a href="/cdn-cgi/l/email-protection#9fecf7aba9adaadffcf0f3eaf2fdf6feb1fafbea" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 
+  <!-- REACH PLC -->
   <section id="reach">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Selected work at Reach Plc</span>
+        <span class="section-label">Reach Plc</span>
         <span class="section-sub">The Mirror · Irish Star · The Express</span>
         <span class="section-count">Selected Work</span>
       </div>
@@ -822,10 +841,13 @@
     </div>
   </section>
 
+  <!-- DATA PROJECTS -->
   <section id="data-projects">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Data Projects at J-School</span>
+        <span class="section-label">Data Projects</span>
+        <span class="section-sub">Investigative &amp; Longform</span>
+        <span class="section-count">4 Projects</span>
       </div>
 
       <div class="projects-grid">
@@ -860,6 +882,7 @@
     </div>
   </section>
 
+  <!-- FREELANCE -->
   <section id="freelance">
     <div class="wrap">
       <div class="section-header">
@@ -935,6 +958,7 @@
     </div>
   </section>
 
+  <!-- VIDEO -->
   <section id="video">
     <div class="wrap">
       <div class="section-header">
@@ -959,6 +983,7 @@
     </div>
   </section>
 
+  <!-- MISC CHARTS -->
   <section id="charts">
     <div class="wrap">
       <div class="section-header">
@@ -977,6 +1002,7 @@
     </div>
   </section>
 
+  <!-- ACCOLADES -->
   <div class="accolades-strip" id="accolades">
     <div class="accolades-inner">
       <div class="accolades-label">Recognition &amp; Awards</div>
@@ -1005,6 +1031,7 @@
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
