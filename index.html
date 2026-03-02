@@ -146,18 +146,9 @@
 
     /* ─── HERO ─── */
     .hero {
-      padding: 4rem 0 3rem;
+      padding: 3rem 0 2.5rem;
       border-bottom: 3px double var(--rule);
     }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1px 38%;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .hero-rule { background: var(--rule); }
 
     .hero-kicker {
       font-family: var(--ff-mono);
@@ -168,25 +159,11 @@
       margin-bottom: .75rem;
     }
 
-    .hero-headline {
-      font-family: var(--ff-serif);
-      font-size: clamp(2.4rem, 4.5vw, 4rem);
-      font-weight: 900;
-      line-height: 1.08;
-      letter-spacing: -.02em;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-headline em {
-      font-style: italic;
-      color: var(--mid);
-    }
-
     .hero-body {
       color: var(--mid);
       font-size: 15px;
       line-height: 1.8;
-      max-width: 54ch;
+      max-width: 68ch;
       margin-bottom: 1.75rem;
     }
 
@@ -220,56 +197,6 @@
     .btn:hover { background: var(--ink); color: var(--cream); }
     .btn-filled { background: var(--accent); border-color: var(--accent); color: #fff; }
     .btn-filled:hover { background: #a8320e; border-color: #a8320e; color:#fff; }
-
-    /* sidebar stats */
-    .hero-sidebar {}
-
-    .stat-block {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .stat-block:first-child { border-top: 1px solid var(--rule); }
-
-    .stat-num {
-      font-family: var(--ff-serif);
-      font-size: 2.5rem;
-      font-weight: 900;
-      line-height: 1;
-      color: var(--ink);
-    }
-
-    .stat-label {
-      font-family: var(--ff-mono);
-      font-size: 10px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-top: .25rem;
-    }
-
-    .accolade-block {
-      margin-top: 1.5rem;
-      padding: 1.25rem;
-      background: var(--paper);
-      border-left: 3px solid var(--accent);
-    }
-
-    .accolade-block .accolade-label {
-      font-family: var(--ff-mono);
-      font-size: 9px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: .4rem;
-    }
-
-    .accolade-block p {
-      font-family: var(--ff-serif);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.5;
-      color: var(--ink);
-    }
 
     /* ─── SECTION HEADER ─── */
     .section-header {
@@ -696,13 +623,6 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-rule { display:none; }
-      .hero-sidebar { display: grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
-      .stat-block { padding: 1rem; border: 1px solid var(--rule); border-top:none; }
-      .stat-block:first-child { border-top: 1px solid var(--rule); }
-      .accolade-block { display:none; }
-
       .reach-layout { grid-template-columns: 1fr; }
       .reach-rule { display:none; }
 
@@ -744,7 +664,7 @@
       <span class="masthead-date">Data Journalist &amp; Reporter · New York City</span>
       <a href="#" class="masthead-name">Somaiyah Hafeez</a>
       <nav class="masthead-links">
-        <a href="mailto:sh4625@columbia.edu">Email</a>
+        <a href="/cdn-cgi/l/email-protection#9be8f3afada9aedbf8f4f7eef6f9f2fab5feffee">Email</a>
         <a href="https://github.com/somaiyahhafeez" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" target="_blank">LinkedIn</a>
         <a href="https://x.com/sommulbaloch" target="_blank">X</a>
@@ -768,43 +688,13 @@
   <!-- HERO -->
   <section class="hero" id="about">
     <div class="wrap">
-      <div class="hero-grid">
-        <!-- main -->
-        <div>
-          <p class="hero-kicker">Columbia University · M.S. Data Journalism</p>
-          <h1 class="hero-headline">Reporting<br>data's<br><em>human story.</em></h1>
-          <p class="hero-body">
-            I'm a data journalist and reporter at <strong>Reach Plc</strong>, producing breaking news and data-driven investigations using public records, analysis, and visualization. My work has appeared in <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">The Guardian</a>, <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" target="_blank">New Lines Magazine</a>, <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" target="_blank">The New Humanitarian</a>, and <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" target="_blank">The Diplomat</a>. I cover human rights, climate, immigration, and Balochistan.
-          </p>
-          <div class="hero-cta-row">
-            <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
-            <a href="mailto:sh4625@columbia.edu" class="btn">Get in Touch</a>
-          </div>
-        </div>
-
-        <!-- vertical rule -->
-        <div class="hero-rule"></div>
-
-        <!-- sidebar -->
-        <div class="hero-sidebar">
-          <div class="stat-block">
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Publications</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-num">4</div>
-            <div class="stat-label">Awards &amp; Accolades</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-num">3+</div>
-            <div class="stat-label">Years Reporting</div>
-          </div>
-
-          <div class="accolade-block">
-            <div class="accolade-label">Judges' Comment · SOPA Awards 2025</div>
-            <p>"A comprehensive explanatory piece that makes great use of graphics to lay out the history of the Balochistan conflict."</p>
-          </div>
-        </div>
+      <p class="hero-kicker">Columbia University · M.S. Data Journalism</p>
+      <p class="hero-body">
+        I'm a data journalist and reporter at <strong>Reach Plc</strong>, producing breaking news and data-driven investigations using public records, analysis, and visualization. My work has appeared in <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">The Guardian</a>, <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" target="_blank">New Lines Magazine</a>, <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" target="_blank">The New Humanitarian</a>, and <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" target="_blank">The Diplomat</a>. I cover human rights, climate, immigration, and Balochistan.
+      </p>
+      <div class="hero-cta-row">
+        <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
+        <a href="mailto:sh4625@columbia.edu" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -1120,10 +1010,10 @@
     <div class="footer-inner">
       <div>
         <div class="footer-name">Somaiyah Hafeez</div>
-        <div class="footer-copy">Data Journalist &amp; Reporter · New York City · sh4625@columbia.edu</div>
+        <div class="footer-copy">Data Journalist &amp; Reporter · New York City · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2b1aaf6f4f0f782a1adaeb7afa0aba3eca7a6b7">[email&#160;protected]</a></div>
       </div>
       <div class="footer-icons">
-        <a href="mailto:sh4625@columbia.edu" title="Email">
+        <a href="/cdn-cgi/l/email-protection#e2918ad6d4d0d7a2818d8e978f808b83cc878697" title="Email">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
         <a href="https://github.com/somaiyahhafeez" title="GitHub" target="_blank">
@@ -1140,7 +1030,7 @@
   </footer>
 
   <!-- Nav highlight on scroll -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const sections = document.querySelectorAll('section[id], div[id]');
     const navLinks = document.querySelectorAll('.kicker-nav a');
 
@@ -1160,17 +1050,4 @@
     navLinks.forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        if (href.startsWith('#')) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            const offset = document.querySelector('.kicker-nav').offsetHeight + 12;
-            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
-          }
-        }
-      });
-    });
-  </script>
-
-</body>
-</html>
+        if (href.startsWith
