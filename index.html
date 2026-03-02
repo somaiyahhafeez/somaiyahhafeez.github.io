@@ -31,7 +31,7 @@
 
     body {
       font-family: var(--ff-sans);
-      background: var(--cream);
+      background: #fff;
       color: var(--ink);
       font-size: 15px;
       line-height: 1.7;
@@ -54,6 +54,7 @@
     .masthead {
       border-bottom: 1px solid var(--rule);
       padding: 0 clamp(1.5rem, 5vw, 6rem);
+      background: #fff;
     }
 
     .masthead-inner {
@@ -102,7 +103,7 @@
     /* ─── KICKER NAV ─── */
     .kicker-nav {
       border-bottom: 1px solid var(--rule);
-      background: var(--cream);
+      background: #fff;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -125,16 +126,16 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--mid);
-      padding: .75rem 1.25rem;
-      border-right: 1px solid var(--rule);
+      padding: .75rem 1.5rem;
       white-space: nowrap;
-      transition: color .2s, background .2s;
+      transition: color .2s;
       flex-shrink: 0;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
     }
-    .kicker-nav a:first-child { border-left: 1px solid var(--rule); }
     .kicker-nav a:hover, .kicker-nav a.active {
       color: var(--accent);
-      background: var(--paper);
+      border-bottom-color: var(--accent);
     }
 
     /* ─── WRAPPER ─── */
@@ -230,121 +231,101 @@
       color: var(--mid);
     }
 
-    /* ─── REACH GRID ─── */
-    /* Featured story + side column */
-    .reach-layout {
+    /* ─── REACH CARD GRID ─── */
+    .reach-card-grid {
       display: grid;
-      grid-template-columns: 1fr 1px 320px;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .reach-rule { background: var(--rule); }
-
-    /* map cards in main column */
-    .map-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
     }
 
-    .map-card {
+    .rc-card {
       display: block;
-      transition: opacity .25s;
+      transition: transform .25s;
+      text-decoration: none;
     }
-    .map-card:hover { opacity: .85; }
+    .rc-card:hover { transform: translateY(-4px); }
 
-    .map-card .map-kicker {
-      font-family: var(--ff-mono);
-      font-size: 9px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: .3rem;
-    }
-
-    .map-card h3 {
-      font-family: var(--ff-serif);
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: .4rem;
-    }
-
-    .map-card p {
-      font-size: 12px;
-      color: var(--mid);
-      line-height: 1.6;
-    }
-
-    .map-embed-wrap {
-      margin-bottom: .75rem;
-      border: 1px solid var(--rule);
+    .rc-img {
+      aspect-ratio: 3/2;
       overflow: hidden;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      margin-bottom: .65rem;
     }
-
-    .map-embed-wrap iframe {
+    .rc-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
       display: block;
-      width: 100%;
-      border: none;
+      transition: transform .4s;
+    }
+    .rc-card:hover .rc-img img { transform: scale(1.04); }
+
+    .rc-img--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--paper);
+    }
+    .rc-img--placeholder span {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-align: center;
+      padding: 1rem;
     }
 
-    /* sidebar story list */
-    .sidebar-stories { display: flex; flex-direction: column; }
+    .rc-body {}
 
-    .story-item {
-      display: block;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--rule);
-      transition: opacity .2s;
-    }
-    .story-item:first-child { padding-top: 0; }
-    .story-item:hover { opacity: .75; }
-
-    .story-kicker {
+    .rc-kicker {
       font-family: var(--ff-mono);
       font-size: 9px;
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--accent2);
-      margin-bottom: .2rem;
+      margin-bottom: .25rem;
     }
 
-    .story-title {
+    .rc-card h3 {
       font-family: var(--ff-serif);
-      font-size: .9rem;
+      font-size: .88rem;
       font-weight: 700;
       line-height: 1.35;
-      margin-bottom: .2rem;
+      color: var(--ink);
+      margin-bottom: .25rem;
     }
 
-    .story-desc {
+    .rc-card p {
       font-size: 11px;
       color: var(--mid);
       line-height: 1.5;
     }
 
-    /* second reach row — full-width table embeds */
-    .reach-tables {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--rule);
+    .reach-note {
+      margin-top: 1.5rem;
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      color: var(--mid);
+      letter-spacing: .04em;
+      border-left: 3px solid var(--rule);
+      padding-left: .75rem;
+    }
+    .reach-note code {
+      background: var(--paper);
+      padding: .1em .3em;
+      font-size: 10px;
     }
 
-    .table-card { display: block; transition: opacity .25s; }
-    .table-card:hover { opacity: .85; }
-
-    .table-card h3 {
-      font-family: var(--ff-serif);
-      font-size: .95rem;
-      font-weight: 700;
-      margin-bottom: .5rem;
-      line-height: 1.35;
+    @media (max-width: 1024px) {
+      .reach-card-grid { grid-template-columns: repeat(3, 1fr); }
     }
-
-    .table-card .map-kicker { margin-bottom:.3rem; }
+    @media (max-width: 640px) {
+      .reach-card-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 400px) {
+      .reach-card-grid { grid-template-columns: 1fr; }
+    }
 
     /* ─── DATA PROJECTS ─── */
     .projects-grid {
@@ -694,7 +675,7 @@
       </p>
       <div class="hero-cta-row">
         <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
-        <a href="mailto:sh4625@columbia.edu" class="btn">Get in Touch</a>
+        <a href="/cdn-cgi/l/email-protection#9fecf7aba9adaadffcf0f3eaf2fdf6feb1fafbea" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -703,111 +684,128 @@
   <section id="reach">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Selected work Reach Plc</span>
+        <span class="section-label">Reach Plc</span>
         <span class="section-sub">The Mirror · Irish Star · The Express</span>
         <span class="section-count">Selected Work</span>
       </div>
 
-      <!-- main: map cards | rule | sidebar -->
-      <div class="reach-layout">
-        <div>
-          <div class="map-cards">
+      <div class="reach-card-grid">
 
-            <a class="map-card" href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" target="_blank">
-              <div class="map-embed-wrap">
-                <iframe title="ICE arrests" src="https://datawrapper.dwcdn.net/PPzy0/2/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
-              </div>
-              <div class="map-kicker">The Mirror · Data Analysis</div>
-              <h3>60% of ICE arrests in New York had no criminal charges</h3>
-              <p>Analyzed the federal ICE arrest dataset across New York State.</p>
-            </a>
+        <a class="rc-card" href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" target="_blank">
+          <div class="rc-img"><img src="images/ice-nyc.png" alt="ICE arrests New York"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Analysis</div>
+            <h3>60% of ICE arrests in New York had no criminal charges</h3>
+            <p>Analyzed the federal ICE arrest dataset across New York State.</p>
+          </div>
+        </a>
 
-            <a class="map-card" href="https://www.themirror.com/news/politics/mass-shooting-map-reveals-numbers-1505478" target="_blank">
-              <div class="map-embed-wrap">
-                <iframe title="Mass shootings in 2025" src="https://datawrapper.dwcdn.net/S4heR/8/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
-              </div>
-              <div class="map-kicker">The Mirror · Data Reporting</div>
-              <h3>Mass Shooting Map Reveals Numbers</h3>
-              <p>Interactive look at mass shootings across the U.S., highlighting trends and patterns.</p>
-            </a>
+        <a class="rc-card" href="https://www.themirror.com/news/politics/mass-shooting-map-reveals-numbers-1505478" target="_blank">
+          <div class="rc-img"><img src="images/mass-shootings.png" alt="Mass shootings map"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Reporting</div>
+            <h3>Mass Shooting Map Reveals Numbers</h3>
+            <p>Interactive look at mass shootings across the U.S., highlighting trends and patterns.</p>
+          </div>
+        </a>
 
-            <a class="map-card" href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" target="_blank">
-              <div class="map-embed-wrap">
-                <iframe title="SNAP benefits" src="https://datawrapper.dwcdn.net/qmtyo/8/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
-              </div>
-              <div class="map-kicker">The Mirror · Mapping</div>
-              <h3>Interactive map shows impact of SNAP benefits freeze</h3>
-              <p>Visualizing which states and counties are most affected by benefit freezes.</p>
-            </a>
+        <a class="rc-card" href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" target="_blank">
+          <div class="rc-img"><img src="images/snap.mov" alt="SNAP benefits freeze map"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Mapping</div>
+            <h3>Interactive map shows impact of SNAP benefits freeze</h3>
+            <p>Visualizing which states and counties are most affected by benefit freezes.</p>
+          </div>
+        </a>
 
-            <a class="map-card" href="https://www.themirror.com/news/politics/heres-how-newyorkers-voted-early-1482510" target="_blank">
-              <div class="map-embed-wrap">
-                <iframe title="Early voter turnout" src="https://datawrapper.dwcdn.net/8FRfN/4/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
-              </div>
-              <div class="map-kicker">The Mirror · Elections</div>
-              <h3>Here's how New Yorkers voted early</h3>
-              <p>Cleaned and analyzed early voting data to reveal borough-level turnout patterns.</p>
-            </a>
+        <a class="rc-card" href="https://www.themirror.com/news/politics/heres-how-newyorkers-voted-early-1482510" target="_blank">
+          <div class="rc-img"><img src="images/early-voting.png" alt="Early voter turnout NYC"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Elections</div>
+            <h3>Here's how New Yorkers voted early</h3>
+            <p>Cleaned and analyzed early voting data to reveal borough-level turnout patterns.</p>
+          </div>
+        </a>
 
-            <a class="map-card" href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" target="_blank">
-              <div class="map-embed-wrap">
-                <iframe title="NYC borough flip" src="https://datawrapper.dwcdn.net/RxbWv/4/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
-              </div>
-              <div class="map-kicker">The Mirror · Elections</div>
-              <h3>Inside the New York borough that flipped in elections</h3>
-              <p>Voting and demographic data combined to analyze political shifts at borough level.</p>
-            </a>
+        <a class="rc-card" href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" target="_blank">
+          <div class="rc-img"><img src="images/mamdani.mov" alt="NYC borough flipped elections"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Elections</div>
+            <h3>Inside the New York borough that flipped in elections</h3>
+            <p>Voting and demographic data combined to analyze political shifts at borough level.</p>
+          </div>
+        </a>
 
-        <!-- rule -->
-        <div class="reach-rule"></div>
+        <a class="rc-card" href="https://www.themirror.com/news/us-news/florida-sets-new-record-executions-1567022" target="_blank">
+          <div class="rc-img"><img src="images/executions.png" alt="Executions"></div>
+            <span>Florida Executions</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Reporting</div>
+            <h3>Florida sets new record for executions</h3>
+            <p>Analyzed state execution data to reveal trends and context behind the record.</p>
+          </div>
+        </a>
 
-        <!-- sidebar stories -->
-        <div class="sidebar-stories">
-          <a class="story-item" href="https://www.themirror.com/news/us-news/florida-sets-new-record-executions-1567022" target="_blank">
-            <div class="story-kicker">The Mirror · Data Reporting</div>
-            <div class="story-title">Florida sets new record for executions</div>
-            <div class="story-desc">Analyzed state execution data to reveal trends and context behind the record.</div>
-          </a>
-          <a class="story-item" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank">
-            <div class="story-kicker">The Mirror · Health Data</div>
-            <div class="story-title">State reports highest number of measles cases</div>
-            <div class="story-desc">Analyzed CDC data to track outbreak trends and state-level incidence.</div>
-          </a>
-          <a class="story-item" href="https://www.themirror.com/news/politics/us-behind-russia-nukes-data-1476456" target="_blank">
-            <div class="story-kicker">The Mirror · Defense Data</div>
-            <div class="story-title">US lags behind Russia in nuclear weapons, data shows</div>
-            <div class="story-desc">Used arms control datasets to compare nuclear stockpiles and spending trends.</div>
-          </a>
-          <a class="story-item" href="https://www.themirror.com/news/politics/stark-ice-data-shows-enormous-1471882" target="_blank">
-            <div class="story-kicker">The Mirror · Data Analysis</div>
-            <div class="story-title">ICE data shows surge in Illinois arrests — youngest detained aged 3</div>
-            <div class="story-desc">Investigated ICE arrest and deportation data in Illinois.</div>
-          </a>
-          <a class="story-item" href="https://www.themirror.com/news/politics/two-federal-agencies-gutted-hardest-1423721" target="_blank">
-            <div class="story-kicker">The Mirror · Data Reporting</div>
-            <div class="story-title">Two federal agencies gutted hardest under recent budget cuts</div>
-            <div class="story-desc">Investigated federal budget allocations and agencies most affected by cuts.</div>
-          </a>
-          <a class="story-item" href="https://www.themirror.com/news/us-news/protesters-drive-500-miles-speak-1413546" target="_blank">
-            <div class="story-kicker">The Mirror · Field Reporting</div>
-            <div class="story-title">Protesters drive 500 miles to speak out</div>
-            <div class="story-desc">Reported on protests in New York City on the anniversary of Oct. 7.</div>
-          </a>
-          <a class="story-item" href="https://www.the-express.com/news/politics/190155/sudans-forgotten-war-260000-people-on-brink-of-massacre" target="_blank">
-            <div class="story-kicker">The Express · Conflict Data</div>
-            <div class="story-title">Sudan's forgotten war: 260,000 people on brink of massacre</div>
-            <div class="story-desc">Interviewed experts to highlight Sudan crisis impacts.</div>
-          </a>
-        </div>
-      </div>
-    </div>
+        <a class="rc-card" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank">
+          <div class="rc-img"><img src="images/measles.png" alt="Measles"></div>
+            <span>Measles Outbreak</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Health Data</div>
+            <h3>State reports highest number of measles cases</h3>
+            <p>Analyzed CDC data to track outbreak trends and state-level incidence.</p>
+          </div>
+        </a>
+
+        <a class="rc-card" href="https://www.themirror.com/news/politics/us-behind-russia-nukes-data-1476456" target="_blank">
+          <div class="rc-img"><img src="images/nuclear.png" alt="Nuclear"></div>
+            <span>Nuclear Weapons Data</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Defense Data</div>
+            <h3>US lags behind Russia in nuclear weapons, data shows</h3>
+            <p>Used arms control datasets to compare nuclear stockpiles and spending trends.</p>
+          </div>
+        </a>
+
+        <a class="rc-card" href="https://www.themirror.com/news/politics/stark-ice-data-shows-enormous-1471882" target="_blank">
+          <div class="rc-img"><img src="images/ice-illionois.png" alt="ICE illinois"></div>
+            <span>ICE Illinois Data</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Analysis</div>
+            <h3>ICE data shows surge in Illinois arrests — youngest detained aged 3</h3>
+            <p>Investigated ICE arrest and deportation data in Illinois.</p>
+          </div>
+        </a>
+
+
+        <a class="rc-card" href="https://www.themirror.com/news/us-news/protesters-drive-500-miles-speak-1413546" target="_blank">
+          <div class="rc-img"><img src="images/oct-7.jpg" alt="Protesters Oct 7 anniversary"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Field Reporting</div>
+            <h3>Protesters drive 500 miles to speak out</h3>
+            <p>Reported on protests in New York City on the anniversary of Oct. 7.</p>
+          </div>
+        </a>
+
+        <a class="rc-card" href="https://www.the-express.com/news/politics/190155/sudans-forgotten-war-260000-people-on-brink-of-massacre" target="_blank">
+          <div class="rc-img"><img src="images/sudan.jpg" alt="Sudan war"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Express · Conflict Data</div>
+            <h3>Sudan's forgotten war: 260,000 people on brink of massacre</h3>
+            <p>Interviewed experts to highlight Sudan crisis impacts.</p>
+          </div>
+        </a>
+
   </section>
 
   <!-- DATA PROJECTS -->
   <section id="data-projects">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Data Projects Produced at Columbia University</span>
+        <span class="section-label">Data Projects at J-School</span>
       </div>
 
       <div class="projects-grid">
@@ -847,6 +845,7 @@
     <div class="wrap">
       <div class="section-header">
         <span class="section-label">Some of my freelance work</span>
+        <span class="section-sub">International Publications</span>
       </div>
 
       <div class="freelance-grid">
@@ -920,23 +919,22 @@
   <section id="video">
     <div class="wrap">
       <div class="section-header">
-        <span class="section-label">Featured Broadcasts</span>
+        <span class="section-label">Video</span>
+        <span class="section-sub">Featured Broadcasts</span>
+        <span class="section-count">3 Videos</span>
       </div>
       <div class="video-grid">
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Young Journalist Award Finalist 2024: Somaiyah Hafeez, Pakistan
-</h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Young Journalist Award Finalist 2024: Somaiyah Hafeez, Pakistan</h3>
         </div>
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Balochistan's Somaiyah Hafeez: Finalist for the Thomson Foundation Young Journalist Award - BBC URDU
-</h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Balochistan's Somaiyah Hafeez: Finalist for the Thomson Foundation Young Journalist Award - BBC URDU</h3>
         </div>
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Balochistan's Long March Protest
-</h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Balochistan's Long March Protest</h3>
         </div>
       </div>
     </div>
@@ -1015,7 +1013,7 @@
   </footer>
 
   <!-- Nav highlight on scroll -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const sections = document.querySelectorAll('section[id], div[id]');
     const navLinks = document.querySelectorAll('.kicker-nav a');
 
@@ -1031,8 +1029,4 @@
 
     sections.forEach(s => observer.observe(s));
 
-    // smooth scroll
-    navLinks.forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if (href.startsWith
+    // smoot
