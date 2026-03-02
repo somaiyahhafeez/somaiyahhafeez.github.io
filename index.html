@@ -1,801 +1,1176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Somaiyah Hafeez",
-  "alternateName": "Somaiyah Hafeez journalist",
-  "jobTitle": "Data Journalist and Reporter",
-  "url": "https://somaiyahhafeez.github.io",
-  "sameAs": [
-    "https://github.com/somaiyahhafeez",
-    "https://www.linkedin.com/in/somaiyah-hafeez-520705269/",
-    "https://x.com/sommulbaloch"
-  ],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Columbia University"
-  }
-}
-</script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somaiyah Hafeez — Data Journalist & Reporter</title>
+  <meta name="description" content="Portfolio of Somaiyah Hafeez — data journalist and reporter covering human rights, climate, immigration, and Balochistan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <title> Somaiyah Hafeez | Journalist & Data Reporter</title>
-
-  <meta name="description"
-    content="Portfolio of Somaiyah Hafeez — journalist covering human rights, climate change, immigration, and balochistan.">
-
-  <meta name="author" content="Somaiyah Hafeez">
-
-  <meta property="og:title" content="Somaiyah Hafeez | Journalist & Data Reporter">
-  <meta property="og:description" content="journalist covering human rights, climate change, immigration, and balochistan.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/somaiyahhafeez/">
-  <meta property="og:image" content="https://somaiyahhafeez.github.io/images/somaiyah_favicon.png">
-
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Somaiyah Hafeez| Journalist & Data Reporter">
-  <meta name="twitter:description"
-    content="Journalist covering human rights, climate change, immigration, and balochistan.">
-  <meta name="twitter:image" content="https://ananyabchetia.github.io/me.png">
-  <title>Somaiyah Hafeez, Award-winning data journalist and reporter</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="images/somaiyah_favicon.png">
-  <link rel="shortcut icon" type="image/png" href="images/somaiyah_favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6630dd9732.js" crossorigin="anonymous"></script>
   <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
-      line-height: 1.7; 
-      color: #222; 
-      background-color: #fff;
-      font-size: 16px;
+    /* ─── TOKENS ─── */
+    :root {
+      --cream: #f9f6f1;
+      --paper: #f2ede4;
+      --ink:   #141210;
+      --mid:   #6b6560;
+      --rule:  #d9d2c8;
+      --accent:#c8411b;        /* editorial red */
+      --accent2:#2a5c8e;       /* ink blue */
+      --ff-serif: 'Playfair Display', Georgia, serif;
+      --ff-sans:  'DM Sans', system-ui, sans-serif;
+      --ff-mono:  'DM Mono', 'Courier New', monospace;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-    }
-    
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #000;
-    }
-    
-.container {
-  max-width: 1140px; /* Bootstrap's lg container */
-}
-#misc-charts .project-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: none;
-}
 
-#misc-charts .project-item {
-  margin-bottom: 2rem;
-}
-    
-    .top-nav {
-      padding: 2rem 0;
-      margin-bottom: 1rem;
+    /* ─── RESET ─── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-sans);
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
-    
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #000;
-      text-decoration: none;
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; width: 100%; }
+
+    /* ─── TOP RULE ─── */
+    .top-rule {
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
     }
-    
-    .navbar-light .navbar-nav .nav-link {
-      color: #555;
-      font-weight: 500;
-      padding: 0.5rem 0;
-      margin-left: 1.5rem;
-      text-decoration: none;
+
+    /* ─── MASTHEAD ─── */
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      padding: 0 clamp(1.5rem, 5vw, 6rem);
     }
-    
-    .navbar-light .navbar-nav .nav-link:hover {
-      color: #000;
+
+    .masthead-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 1.25rem 0;
+      gap: 1rem;
     }
-    
-    .hero-section {
-      padding: 2rem 0 3rem;
+
+    .masthead-date {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mid);
     }
-    
-    .lead {
-      font-size: 1.1rem;
-      font-weight: 400;
+
+    .masthead-name {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .masthead-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.25rem;
+    }
+
+    .masthead-links a {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      transition: color .2s;
+    }
+    .masthead-links a:hover { color: var(--accent); }
+
+    /* ─── KICKER NAV ─── */
+    .kicker-nav {
+      border-bottom: 1px solid var(--rule);
+      background: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 clamp(1.5rem, 5vw, 6rem);
+    }
+
+    .kicker-nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .kicker-nav-inner::-webkit-scrollbar { display:none; }
+
+    .kicker-nav a {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      padding: .75rem 1.25rem;
+      border-right: 1px solid var(--rule);
+      white-space: nowrap;
+      transition: color .2s, background .2s;
+      flex-shrink: 0;
+    }
+    .kicker-nav a:first-child { border-left: 1px solid var(--rule); }
+    .kicker-nav a:hover, .kicker-nav a.active {
+      color: var(--accent);
+      background: var(--paper);
+    }
+
+    /* ─── WRAPPER ─── */
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 6rem);
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 3px double var(--rule);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 38%;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .hero-rule { background: var(--rule); }
+
+    .hero-kicker {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+
+    .hero-headline {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.02em;
       margin-bottom: 1.5rem;
     }
-    
-    .hero-section a {
-      color: #000;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      font-weight: 400;
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--mid);
     }
-    
-    .hero-section a:hover {
-      color: #666;
+
+    .hero-body {
+      color: var(--mid);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 54ch;
+      margin-bottom: 1.75rem;
     }
-    
-    .social-icons {
+
+    .hero-body a {
+      color: var(--accent2);
+      border-bottom: 1px solid currentColor;
+      transition: color .2s;
+    }
+    .hero-body a:hover { color: var(--accent); }
+
+    .hero-cta-row {
       display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
     }
-    
-    .social-icons a {
-      color: #222;
-      text-decoration: none;
-      font-size: 1.2rem;
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .6rem 1.25rem;
+      border: 1px solid var(--ink);
+      transition: background .2s, color .2s;
+      cursor: pointer;
     }
-    
-    .social-icons a:hover {
-      color: #666;
+    .btn:hover { background: var(--ink); color: var(--cream); }
+    .btn-filled { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-filled:hover { background: #a8320e; border-color: #a8320e; color:#fff; }
+
+    /* sidebar stats */
+    .hero-sidebar {}
+
+    .stat-block {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--rule);
     }
-    
-    .section-heading {
-      font-size: 1.5rem;
-      margin: 3rem 0 1.5rem;
+    .stat-block:first-child { border-top: 1px solid var(--rule); }
+
+    .stat-num {
+      font-family: var(--ff-serif);
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .stat-label {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: .25rem;
+    }
+
+    .accolade-block {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      background: var(--paper);
+      border-left: 3px solid var(--accent);
+    }
+
+    .accolade-block .accolade-label {
+      font-family: var(--ff-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .4rem;
+    }
+
+    .accolade-block p {
+      font-family: var(--ff-serif);
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+
+    /* ─── SECTION HEADER ─── */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin: 4rem 0 1.75rem;
+      padding-bottom: .6rem;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .section-label {
+      font-family: var(--ff-serif);
+      font-size: 1.15rem;
       font-weight: 700;
-      position: relative;
-      display: inline-block;
+      letter-spacing: -.01em;
     }
-    
-    .section-heading:after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 3rem;
-      height: 3px;
-      background-color: #000;
+
+    .section-sub {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--mid);
     }
-    
-    .project-item {
-      margin-bottom: 3rem;
+
+    .section-count {
+      margin-left: auto;
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      color: var(--mid);
+    }
+
+    /* ─── REACH GRID ─── */
+    /* Featured story + side column */
+    .reach-layout {
+      display: grid;
+      grid-template-columns: 1fr 1px 320px;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .reach-rule { background: var(--rule); }
+
+    /* map cards in main column */
+    .map-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .map-card {
       display: block;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease;
+      transition: opacity .25s;
     }
-    
-    .project-item:hover {
-      color: inherit;
-      transform: translateY(-3px);
+    .map-card:hover { opacity: .85; }
+
+    .map-card .map-kicker {
+      font-family: var(--ff-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .3rem;
     }
-    
-    .project-image {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  height: auto;         /* Changed from 220px */
-  object-fit: contain;  /* Changed from cover */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-    .project-title {
+
+    .map-card h3 {
+      font-family: var(--ff-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: .4rem;
+    }
+
+    .map-card p {
+      font-size: 12px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    .map-embed-wrap {
+      margin-bottom: .75rem;
+      border: 1px solid var(--rule);
+      overflow: hidden;
+    }
+
+    .map-embed-wrap iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
+    /* sidebar story list */
+    .sidebar-stories { display: flex; flex-direction: column; }
+
+    .story-item {
+      display: block;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rule);
+      transition: opacity .2s;
+    }
+    .story-item:first-child { padding-top: 0; }
+    .story-item:hover { opacity: .75; }
+
+    .story-kicker {
+      font-family: var(--ff-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: .2rem;
+    }
+
+    .story-title {
+      font-family: var(--ff-serif);
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: .2rem;
+    }
+
+    .story-desc {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    /* second reach row — full-width table embeds */
+    .reach-tables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .table-card { display: block; transition: opacity .25s; }
+    .table-card:hover { opacity: .85; }
+
+    .table-card h3 {
+      font-family: var(--ff-serif);
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+      line-height: 1.35;
+    }
+
+    .table-card .map-kicker { margin-bottom:.3rem; }
+
+    /* ─── DATA PROJECTS ─── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      display: block;
+      transition: transform .25s;
+    }
+    .project-card:hover { transform: translateY(-4px); }
+
+    .project-card .card-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      margin-bottom: .75rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .project-card .card-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+    .project-card:hover .card-img img { transform: scale(1.05); }
+
+    .project-card .card-kicker {
+      font-family: var(--ff-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .25rem;
+    }
+
+    .project-card h3 {
+      font-family: var(--ff-serif);
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: .3rem;
+    }
+
+    .project-card p {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    /* ─── FREELANCE ─── */
+    /* Magazine-style: alternating large + two-up */
+    .freelance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .fl-card {
+      display: block;
+      transition: opacity .2s;
+    }
+    .fl-card:hover { opacity: .8; }
+
+    .fl-card .card-img {
+      aspect-ratio: 3/2;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      margin-bottom: .65rem;
+    }
+    .fl-card .card-img img { width:100%; height:100%; object-fit:cover; transition: transform .4s; }
+    .fl-card:hover .card-img img { transform: scale(1.04); }
+
+    .fl-card .pub-tag {
+      font-family: var(--ff-mono);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: .25rem;
+    }
+
+    .fl-card h3 {
+      font-family: var(--ff-serif);
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: .25rem;
+    }
+
+    .fl-card p {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    /* ─── ACCOLADES STRIP ─── */
+    .accolades-strip {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 3rem clamp(1.5rem, 5vw, 6rem);
+      margin: 5rem 0 0;
+    }
+
+    .accolades-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .accolades-label {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #a09a92;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .accolades-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #333;
+    }
+
+    .accolades-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .ac-item {}
+
+    .ac-item .ac-org {
+      font-family: var(--ff-mono);
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .4rem;
+    }
+
+    .ac-item h3 {
+      font-family: var(--ff-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: .5rem;
+    }
+
+    .ac-item p {
+      font-size: 12px;
+      color: #a09a92;
+      line-height: 1.6;
+    }
+
+    /* ─── VIDEO SECTION ─── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .video-card {}
+
+    .video-card .ratio {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      margin-bottom: .75rem;
+    }
+    .video-card .ratio iframe {
+      position: absolute; top:0; left:0;
+      width:100%; height:100%;
+      border:none;
+    }
+
+    .video-card h3 {
+      font-family: var(--ff-serif);
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    /* ─── MISC CHARTS ─── */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .chart-item {
+      border: 1px solid var(--rule);
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .chart-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .3s;
+    }
+    .chart-item:hover img { transform: scale(1.02); }
+
+    /* ─── FOOTER ─── */
+    .site-footer {
+      margin-top: 5rem;
+      border-top: 3px double var(--rule);
+      padding: 2.5rem clamp(1.5rem, 5vw, 6rem);
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer-name {
+      font-family: var(--ff-serif);
       font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #000;
+      font-weight: 700;
+      margin-bottom: .25rem;
     }
-    
-    .project-description {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 0.5rem;
+
+    .footer-copy {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+      color: var(--mid);
     }
-    
-    .project-tag {
-      font-size: 0.8rem;
-      color: #777;
-      display: inline-block;
-      margin-right: 0.5rem;
-      background-color: #f5f5f5;
-      padding: 0.2rem 0.5rem;
-      border-radius: 3px;
+
+    .footer-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
     }
-    
-    .btn-view-more {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.5rem 1.5rem;
-      background-color: #fff;
-      color: #000;
-      border: 1px solid #000;
-      border-radius: 4px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s ease;
+
+    .footer-icons a {
+      width: 36px; height: 36px;
+      border: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--mid);
+      transition: border-color .2s, color .2s, background .2s;
     }
-    
-    .btn-view-more:hover {
-      background-color: #000;
-      color: #fff;
+    .footer-icons a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--paper);
     }
-    
-    .footer {
-      padding: 3rem 0;
-      margin-top: 4rem;
-      border-top: 1px solid #eee;
-      text-align: center;
-      color: #666;
-      font-size: 0.9rem;
+
+    .footer-icons svg { width:16px; height:16px; fill:currentColor; }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(18px); }
+      to   { opacity:1; transform:translateY(0); }
     }
-    
-    .footer .social-icons {
-      justify-content: center;
-      margin: 1rem 0;
+
+    .hero-kicker  { animation: fadeUp .5s ease both; }
+    .hero-headline{ animation: fadeUp .55s .08s ease both; }
+    .hero-body    { animation: fadeUp .55s .16s ease both; }
+    .hero-cta-row { animation: fadeUp .55s .22s ease both; }
+    .hero-sidebar { animation: fadeUp .55s .28s ease both; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-rule { display:none; }
+      .hero-sidebar { display: grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+      .stat-block { padding: 1rem; border: 1px solid var(--rule); border-top:none; }
+      .stat-block:first-child { border-top: 1px solid var(--rule); }
+      .accolade-block { display:none; }
+
+      .reach-layout { grid-template-columns: 1fr; }
+      .reach-rule { display:none; }
+
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .accolades-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    
+
     @media (max-width: 768px) {
-      .navbar-nav {
-        margin-top: 1rem;
-      }
-      
-      .navbar-light .navbar-nav .nav-link {
-        margin-left: 0;
-        padding: 0.5rem 0;
-      }
-      
-      .container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
+      .masthead-inner { grid-template-columns: 1fr; text-align:center; }
+      .masthead-date { display:none; }
+      .masthead-links { justify-content: center; }
+
+      .map-cards { grid-template-columns: 1fr; }
+      .freelance-grid { grid-template-columns: 1fr 1fr; }
+      .reach-tables { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
+      .charts-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr; text-align:center; }
+      .footer-icons { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .freelance-grid { grid-template-columns: 1fr; }
+      .projects-grid  { grid-template-columns: 1fr; }
+      .accolades-grid { grid-template-columns: 1fr; }
+      .hero-sidebar   { grid-template-columns: 1fr; }
+      .charts-grid    { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light top-nav">
-    <div class="container-fluid p-0">
-      <a class="navbar-brand" href="#">Somaiyah Hafeez</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#work">Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects"> Data Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#accolades">Accolades</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-        </ul>
-      </div>
+  <!-- top rule -->
+  <div class="top-rule"></div>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <span class="masthead-date">Data Journalist &amp; Reporter · New York City</span>
+      <a href="#" class="masthead-name">Somaiyah Hafeez</a>
+      <nav class="masthead-links">
+        <a href="mailto:sh4625@columbia.edu">Email</a>
+        <a href="https://github.com/somaiyahhafeez" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" target="_blank">LinkedIn</a>
+        <a href="https://x.com/sommulbaloch" target="_blank">X</a>
+        <a href="Resume/Somaiyah_Hafeez_Resume.pdf" target="_blank">Résumé ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- KICKER NAV -->
+  <nav class="kicker-nav">
+    <div class="kicker-nav-inner">
+      <a href="#reach">Reach Plc</a>
+      <a href="#data-projects">Data Projects</a>
+      <a href="#freelance">Freelance</a>
+      <a href="#video">Video</a>
+      <a href="#charts">Charts</a>
+      <a href="#accolades">Accolades</a>
     </div>
   </nav>
 
-  <!-- Hero section -->
-  <section class="hero-section">
-  <h1>
-  Data journalist and reporter based in New York City
-  </h1>
-
-
-    <p class="lead">
-      Master's in Data Journalism from Columbia University. Reported on human rights, climate change, politics, and more for 
-      <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi">The Guardian</a>, 
-      <a href="https://newlinesmag.com/writers/somaiyah-hafeez/">New Lines Magazine</a>, 
-      <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez">The New Humanitarian</a>, and 
-      <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/">The Diplomat</a>.
-    </p>
-    <p>
-      Finalist for <a href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/">Thomson Foundation's Young Journalist Award in 2024</a>.
-    </p>
- <p>
-  View my <a href="Resume/Somaiyah_Hafeez_Resume.pdf" target="_blank" rel="noopener"> resume. </a></p>
-
-    
-    <div class="social-icons">
-      <a href="mailto:sh4625@columbia.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://github.com/somaiyahhafeez" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://x.com/sommulbaloch" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-  </section>
-  <!-- Reach Plc Section -->
-<section id="reach">
-  <h2 class="section-heading">Selected Reporting at Reach Plc</h2>
-
-  <p class="lead">
-    I currently work as a news and data reporter at Reach Plc, producing breaking news and data-driven stories using public records, analysis, and visualization.
-  </p>
-
-  <div class="row">
-
-    <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" class="project-item">
-        <h3 class="project-title">60% of ICE arrests in New York had no criminal charges</h3>
-        <p class="project-description">
-          Analyzed federal ICE arrest dataset in New York State.
-        </p>
-          <div class="project-viz">
-    <iframe title="" aria-label="Choropleth map" id="datawrapper-chart-PPzy0" src="https://datawrapper.dwcdn.net/PPzy0/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="511" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-  </div>
-        <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Data analysis</span>
-      </a>
-    </div>
-    <div class="col-lg-4">
-  <a href="https://www.themirror.com/news/politics/mass-shooting-map-reveals-numbers-1505478" target="_blank" rel="noopener" class="project-item">
-    <h3 class="project-title">Mass Shooting Map Reveals Numbers</h3>
-    <p class="project-description">An interactive look at mass shootings across the U.S., highlighting trends and data analysis.</p>
-      <div class="project-viz">
-        <iframe title="Mass shootings in 2025" aria-label="Symbol map" id="datawrapper-chart-S4heR" src="https://datawrapper.dwcdn.net/S4heR/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="508" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-      <span class="project-tag">The Mirror</span>
-    <span class="project-tag">Data Reporting</span>
-      </div>
-  </a>
-</div>
-        <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" class="project-item">
-        <h3 class="project-title">Interactive map shows impact of SNAP benefits freeze</h3>
-        <p class="project-description">
-          Built an interactive map visualizing which states and counties are most affected by SNAP benefit freezes.
-        </p>
-         <div class="project-viz">
-           <iframe title="Where a pause in SNAP benefits would hit hardest" aria-label="Choropleth map" id="datawrapper-chart-qmtyo" src="https://datawrapper.dwcdn.net/qmtyo/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="528" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-         </div>
-                <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Mapping</span>
-      </a>
-    </div>
-
-    <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/politics/heres-how-newyorkers-voted-early-1482510" class="project-item">
-        <h3 class="project-title">Here’s how New Yorkers voted early</h3>
-        <p class="project-description">
-          Cleaned and analyzed early voting data to reveal borough-level turnout patterns ahead of Election Day.
-        </p>
-          <div class="project-viz">
-            <iframe title="Early voter turnout in New York City for general mayoral elections" aria-label="Choropleth map" id="datawrapper-chart-8FRfN" src="https://datawrapper.dwcdn.net/8FRfN/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="785" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="wrap">
+      <div class="hero-grid">
+        <!-- main -->
+        <div>
+          <p class="hero-kicker">Columbia University · M.S. Data Journalism</p>
+          <h1 class="hero-headline">Reporting<br>data's<br><em>human story.</em></h1>
+          <p class="hero-body">
+            I'm a data journalist and reporter at <strong>Reach Plc</strong>, producing breaking news and data-driven investigations using public records, analysis, and visualization. My work has appeared in <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">The Guardian</a>, <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" target="_blank">New Lines Magazine</a>, <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" target="_blank">The New Humanitarian</a>, and <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" target="_blank">The Diplomat</a>. I cover human rights, climate, immigration, and Balochistan.
+          </p>
+          <div class="hero-cta-row">
+            <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
+            <a href="mailto:sh4625@columbia.edu" class="btn">Get in Touch</a>
           </div>
-                <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Elections</span>
-      </a>
-    </div>
-            <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" class="project-item">
-        <h3 class="project-title">Inside the New York borough that flipped in elections</h3>
-        <p class="project-description">
-          Combined voting and demographic data to analyze political shifts at borough level.
-        </p>
-        <iframe title="Mamdani trumps Cuomo as most of the Bronx election districts flip" aria-label="Choropleth map" id="datawrapper-chart-RxbWv" src="https://datawrapper.dwcdn.net/RxbWv/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="760" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-        <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Elections</span>
-      </a>    </div>
-        <div class="col-lg-4">
-      <a href="https://www.irishstar.com/news/ireland-news/map-catherine-connolly-election-data-36133882" class="project-item">
-        <h3 class="project-title">Map shows Catherine Connolly’s election performance</h3>
-        <p class="project-description">
-          Created a constituency-level election results map breaking down voting patterns in Ireland.
-        </p>
-        <div class="project-viz">
-          <iframe title="Catherine Connolly wins Ireland presidential election by landslide" aria-label="Choropleth map" id="datawrapper-chart-uCkys" src="https://datawrapper.dwcdn.net/uCkys/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="811" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
         </div>
-        <span class="project-tag">Irish Star</span>
-        <span class="project-tag">Elections</span>
-      </a>
-    </div>
-        <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/us-news/florida-sets-new-record-executions-1567022" class="project-item">
-        <h3 class="project-title">Florida sets new record for executions</h3>
-        <p class="project-description">
-          Analyzed and visualized state execution data to reveal trends and context behind the record.
-        </p>
-         <div class="project-viz">
-           <iframe title="State with and without the death penalty" aria-label="Choropleth map" id="datawrapper-chart-Q91mp" src="https://datawrapper.dwcdn.net/Q91mp/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="544" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-         </div>
-        <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Data reporting</span>
-      </a>
-    </div>
-        <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" class="project-item">
-        <h3 class="project-title">State reports highest number of measles cases</h3>
-        <p class="project-description">
-          Analyzed CDC data to track measles outbreak trends and state-level incidence.
-        </p>
-         <div class="project-viz">
-           <iframe title="Measles cases by state in 2025" aria-label="Choropleth map" id="datawrapper-chart-LjgMW" src="https://datawrapper.dwcdn.net/LjgMW/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="536" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-         </div>
-        <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Health data</span>
-      </a>
-    </div>
-        <div class="col-lg-4">
-      <a href="https://www.themirror.com/news/politics/us-behind-russia-nukes-data-1476456" class="project-item">
-        <h3 class="project-title">US lags behind Russia in nuclear weapons, data shows</h3>
-        <p class="project-description">
-          Used publicly available defense and arms control datasets to compare nuclear stockpiles and spending trends.
-        </p>
-        <div class="project-viz">
-          <iframe title="Russia has the most estimated nuclear weapons" aria-label="Stacked column chart" id="datawrapper-chart-q9nYO" src="https://datawrapper.dwcdn.net/q9nYO/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="532" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+        <!-- vertical rule -->
+        <div class="hero-rule"></div>
+
+        <!-- sidebar -->
+        <div class="hero-sidebar">
+          <div class="stat-block">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Publications</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Awards &amp; Accolades</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years Reporting</div>
+          </div>
+
+          <div class="accolade-block">
+            <div class="accolade-label">Judges' Comment · SOPA Awards 2025</div>
+            <p>"A comprehensive explanatory piece that makes great use of graphics to lay out the history of the Balochistan conflict."</p>
+          </div>
         </div>
-                <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Defense data</span>
-      </a>
-    </div>
-    
-    <div class="col-lg-6">
-      <a href="https://www.themirror.com/news/politics/stark-ice-data-shows-enormous-1471882" class="project-item">
-        <h3 class="project-title">ICE data shows enormous surge in Illinois arrests, with youngest person detained aged 3</h3>
-        <p class="project-description">
-          Investigated ICE arrest and deportation data in Illinois.
-        </p>
-        <div class="project-viz">
-          <iframe title="Latin Americans targeted the most by ICE arrests in Illinois" aria-label="Table" id="datawrapper-chart-noY3g" src="https://datawrapper.dwcdn.net/noY3g/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="935" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-        </div>
-                <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Data analysis</span>
-      </a>
-    </div>
-    <div class="col-lg-6"> 
-      <a href="https://www.themirror.com/news/politics/two-federal-agencies-gutted-hardest-1423721" class="project-item"> 
-        <h3 class="project-title">Two federal agencies gutted hardest under recent budget cuts</h3> 
-        <p class="project-description"> Investigated federal budget allocations and analyzed the agencies most affected by cuts. </p>
-        <div class="project-viz"> <iframe title="More than 85% of employees of EPA and education department furloughed" aria-label="Table" id="datawrapper-chart-TRtU4" src="https://datawrapper.dwcdn.net/TRtU4/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="414" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}(); </script> </div> <span class="project-tag">The Mirror</span> <span class="project-tag">Data reporting</span> </a> </div>
-        <div class="col-lg-6">
-      <a href="https://www.themirror.com/news/us-news/protesters-drive-500-miles-speak-1413546" class="project-item">
-        <h3 class="project-title">Protester drive 500 miles to speak out</h3>
-        <img src="images/oct-7.jpg" alt="Afghan Refugees Article" class="project-image">
-        <p class="project-description">
-          Reported on protests in New York City on the anniversary of Oct. 7 
-        </p>
-        <span class="project-tag">The Mirror</span>
-        <span class="project-tag">Field reporting</span>
-      </a>
-    </div>
-        <div class="col-lg-6">
-      <a href="https://www.the-express.com/news/politics/190155/sudans-forgotten-war-260000-people-on-brink-of-massacre" class="project-item">
-        <h3 class="project-title">Sudan’s forgotten war: 260,000 people on brink of massacre</h3>
-        <img src="images/sudan.jpg" alt="Afghan Refugees Article" class="project-image">
-        <p class="project-description">
-          Interviewed experts to highlight Sudan crisis impacts.
-        </p>
-        <span class="project-tag">The Express</span>
-        <span class="project-tag">Conflict data</span>
-      </a>
-    </div>
-
-  </div>
-  <!-- Miscellaneous Charts Section -->
-<section id="misc-charts">
-  <h2 class="section-heading">Miscellaneous Charts</h2>
-
-  <p class="lead">
-    Standalone data visualizations and quick-turn charts created for reporting and analysis at Reach Plc.
-  </p>
-
-  <div class="row">
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="project-item">
-        <img src="images/Charlie-kirk.png"
-             alt="A locator map for Charlie Kirk Shooting"
-             class="project-image">
       </div>
     </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="project-item">
-        <img src="images/Donald-Trump.png"
-             alt="Age of Presidents"
-             class="project-image">
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="project-item">
-        <img src="images/ICE-NYC.png"
-             alt="ICE arrests in NYC"
-             class="project-image">
-      </div>
-    </div>
-        <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="project-item">
-        <img src="images/Texas-measles.png"
-             alt="ICE arrests in NYC"
-             class="project-image">
-      </div>
-    </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="project-item">
-        <img src="images/executive-orders.png"
-             alt="ICE arrests in NYC"
-             class="project-image">
-      </div>
-    </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="project-item">
-        <img src="images/inflation.png"
-             alt="ICE arrests in NYC"
-             class="project-image">
-      </div>
-    </div>
-
-  </div>
-</section>
-</section>
-
-
-  <!-- Data Projects Section -->
-  <section id="projects">
-    <h2 class="section-heading">Data Projects</h2>
-    
-    <div class="row"> 
-          <div class="col-lg-3">
-        <a href="https://somaiyahhafeez.github.io/superfunds/" class="project-item">
-          <img src="images/superfund.webp" alt="Superfund Story" class="project-image">
-          <h3 class="project-title">New Jersey's Toxic Legacy: Superfund Sites</h3>
-          <p class="project-description">New Jersey has the highest number of superfund sites in all of the U.S, many of which contain uncontrolled toxic wastes that residents can be exposed to.</p>
-          <span class="project-tag">Python/Pandas</span>
-          <span class="project-tag">Data visualization</span>
-          <span class="project-tag">Responsive design</span>
-        </a>
-      </div>
-      <div class="col-lg-3">
-        <a href="https://somaiyahhafeez.github.io/balochistan/" class="project-item">
-          <img src="images/baloch-missing.png" alt="Balochistan Story" class="project-image">
-          <h3 class="project-title">The Lesser Known War: Balochistan's Struggle For Its Disappeared</h3>
-          <p class="project-description">Amid decades of enforced disappearances, Baloch families march for justice.</p>
-          <span class="project-tag">Scraping</span>
-          <span class="project-tag">Data visualization</span>
-          <span class="project-tag">R</span>
-          <span class="project-tag">Responsive design</span>
-        </a>
-      </div>
-      
-     <div class="col-lg-3">
-  <a href="https://somaiyahhafeez.github.io/usaid/" class="project-item">
-    <img src="images/usaid.png" alt="USAID" class="project-image">
-    <h3 class="project-title">USAID's uncertain future risks global aid</h3>
-    <p class="project-description">President Trump's drastic cuts to USAID funding jeopardize global aid, sparking controversy.</p>
-    <span class="project-tag">Python</span>
-    <span class="project-tag">Data visualization</span>
-  </a>
-</div>
-     <div class="col-lg-3">
-  <a href="https://somaiyahhafeez.github.io/pahalgam/" class="project-item">
-    <img src="images/map.png" alt="USAID" class="project-image">
-    <h3 class="project-title">Rival countries, India and Pakistan, fought after a terror attack in Kashmir</h3>
-    <p class="project-description">The dramatic flare-up between the nuclear countries was sparked by a deadly attack on Hindu tourists in Indian-administered Kashmir in April which took 26 lives. India claimed Pakistan supported the militants behind the attack.
-</p>
-    <span class="project-tag">Responsive design</span>
-    <span class="project-tag">Data visualization</span>
-    <span class="project-tag">Mapbox Storytelling</span>
-    
-  </a>
-</div>
-  </div>
-
   </section>
 
-  <!-- Published Work Section -->
-  <section id="work">
-    <h2 class="section-heading">Some Of My Published Freelance Work</h2>
-    
-    <div class="row">
-      <div class="col-lg-4">
-        <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" class="project-item">
-          <img src="images/3984.jpg" alt="House of Love Article" class="project-image">
-          <h3 class="project-title">'House of love': changing young lives in Karachi</h3>
-          <p class="project-description">In Lyari, a slum notorious for violence, Mehr Ghar offers young people a safe place.</p>
-          <span class="project-tag">The Guardian</span>
-        </a>
+  <!-- REACH PLC -->
+  <section id="reach">
+    <div class="wrap">
+      <div class="section-header">
+        <span class="section-label">Reach Plc</span>
+        <span class="section-sub">The Mirror · Irish Star · The Express</span>
+        <span class="section-count">Selected Work</span>
       </div>
-      
-      <div class="col-lg-4">
-        <a href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" class="project-item">
-          <img src="images/kontinentalist.png" alt="Balochistan Disappearances" class="project-image">
-          <h3 class="project-title">Pakistan's untold war: No Justice for Balochistan's Disappeared</h3>
-          <p class="project-description">In Pakistan, thousands are abducted by state forces and tortured in unknown locations.</p>
-          <span class="project-tag">Kontinentalist</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://www.cjr.org/tow_center/courier-newsroom-spent-big-on-a-meta-ad-blitz-in-october.php" class="project-item">
-          <img src="images/courier-newsroom-1.jpg" alt="Courier Newsroom Article" class="project-image">
-          <h3 class="project-title">Courier Newsroom Spent Big on a Meta Ad Blitz in October</h3>
-          <p class="project-description">The $6 million–plus the progressive 'newsroom' spent on Meta lagged only Trump and Harris campaigns.</p>
-          <span class="project-tag">Columbia Journalism Review</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://theuptowner.org/the-mta-halts-free-crosstown-m116-bus-service-uptown/" class="project-item">
-          <img src="images/M116-1-800x365.jpg" alt="M116 Bus Article" class="project-image">
-          <h3 class="project-title">The MTA Halts Free Crosstown M116 Bus Service Uptown</h3>
-          <p class="project-description">The only free bus in East Harlem reimposes fares after the state fails to renew the MTA's pilot program.</p>
-          <span class="project-tag">The Uptowner</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://theuptowner.org/manhattan-community-board-9-votes-in-favor-of-universal-daylighting/" class="project-item">
-          <img src="images/community-board.jpg" alt="Community Board Article" class="project-image">
-          <h3 class="project-title">Manhattan Community Board 9 Votes in Favor Of Universal Daylighting</h3>
-          <p class="project-description">CB9 becomes the city's 18th community board in New York City to pass a resolution supporting Universal Daylighting.</p>
-          <span class="project-tag">The Uptowner</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://columbianewsservice.com/2024/11/26/despite-residents-opposition-soccer-field-with-artificial-turf-under-construction-in-inwood-hill-park/" class="project-item">
-          <img src="images/artificial-turf.png" alt="Artificial turf" class="project-image">
-          <h3 class="project-title">Artificial Turf Battle Emerges in Inwood Hill Park</h3>
-          <p class="project-description">An online petition opposing the $8.7 million artificial soccer field has drawn over 3,000 signatures.</p>
-          <span class="project-tag">Columbia News Service</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://newlinesmag.com/reportage/why-baloch-women-in-pakistan-led-an-unprecedented-march/" class="project-item">
-          <img src="images/baloch-women.jpg" alt="Baloch Women March" class="project-image">
-          <h3 class="project-title">Why Baloch Women in Pakistan Led An Unprecedented March</h3>
-          <p class="project-description">They were protesting against enforced disappearances and extrajudicial killings in a remote province.</p>
-          <span class="project-tag">New Lines Magazine</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://www.thenewhumanitarian.org/news-feature/2024/05/22/afghans-fear-life-both-sides-durand-line" class="project-item">
-          <img src="images/afghan-families-chaman.jpg" alt="Afghan Families Article" class="project-image">
-          <h3 class="project-title">Afghans Fear Life on Both Sides of Durand Line</h3>
-          <p class="project-description">'I'd rather die in Pakistan than go back to Afghanistan.'</p>
-          <span class="project-tag">The New Humanitarian</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://www.thenewhumanitarian.org/analysis/2023/09/19/pakistan-flood-victims-emerging-hunger-hotspots" class="project-item">
-          <img src="images/food-insecurity.jpg" alt="Food Insecurity Article" class="project-image">
-          <h3 class="project-title">For Pakistan Flood Victims, Crises Collide to Fuel Growing Hunger</h3>
-          <p class="project-description">'We cook the same vegetables almost every day... and haven't had meat in months.'</p>
-          <span class="project-tag">The New Humanitarian</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://newlinesmag.com/spotlight/afghan-refugees-born-in-pakistan-are-leaving-their-lives-for-the-unknown/" class="project-item">
-          <img src="images/rahmat-zaman.jpg" alt="Afghan Refugees Article" class="project-image">
-          <h3 class="project-title">Afghan Refugees Born in Pakistan Are Leaving Their Lives for the Unknown</h3>
-          <p class="project-description">As 'unauthorized' refugees are forced to cross the border, many lament being sent to a country they know nothing about.</p>
-          <span class="project-tag">New Lines Magazine</span>
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <a href="https://dialogue.earth/en/climate/after-floods-pakistan-resilient-housing/" class="project-item">
-          <img src="images/climate-housing.jpg" alt="Afghan Refugees Article" class="project-image">
-          <h3 class="project-title">After successive floods, Pakistan is forced to consider resilient housing</h3>
-          <p class="project-description">As millions rebuild their homes in the wake of the devastating 2022 floods, an architect’s innovative model for flood-resilient homes shows the way</p>
-          <span class="project-tag">The Third Pole</span>
-        </a>
-      </div>
-      
-      <div class="col-lg-4">
-        <a href="https://thediplomat.com/2022/08/pakistans-deadly-floods-are-an-annual-occurrence/" class="project-item">
-          <img src="images/thediplomat_2022-08-02-192817.jpg" alt="Urban Flooding Article" class="project-image">
-          <h3 class="project-title">Pakistan's Deadly Floods Are an Annual Occurrence</h3>
-          <p class="project-description">Why does Karachi flood almost every year during the monsoon season?</p>
-          <span class="project-tag">The Diplomat</span>
-        </a>
+
+      <!-- main: map cards | rule | sidebar -->
+      <div class="reach-layout">
+        <div>
+          <div class="map-cards">
+
+            <a class="map-card" href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" target="_blank">
+              <div class="map-embed-wrap">
+                <iframe title="ICE arrests" src="https://datawrapper.dwcdn.net/PPzy0/2/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
+              </div>
+              <div class="map-kicker">The Mirror · Data Analysis</div>
+              <h3>60% of ICE arrests in New York had no criminal charges</h3>
+              <p>Analyzed the federal ICE arrest dataset across New York State.</p>
+            </a>
+
+            <a class="map-card" href="https://www.themirror.com/news/politics/mass-shooting-map-reveals-numbers-1505478" target="_blank">
+              <div class="map-embed-wrap">
+                <iframe title="Mass shootings in 2025" src="https://datawrapper.dwcdn.net/S4heR/8/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
+              </div>
+              <div class="map-kicker">The Mirror · Data Reporting</div>
+              <h3>Mass Shooting Map Reveals Numbers</h3>
+              <p>Interactive look at mass shootings across the U.S., highlighting trends and patterns.</p>
+            </a>
+
+            <a class="map-card" href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" target="_blank">
+              <div class="map-embed-wrap">
+                <iframe title="SNAP benefits" src="https://datawrapper.dwcdn.net/qmtyo/8/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
+              </div>
+              <div class="map-kicker">The Mirror · Mapping</div>
+              <h3>Interactive map shows impact of SNAP benefits freeze</h3>
+              <p>Visualizing which states and counties are most affected by benefit freezes.</p>
+            </a>
+
+            <a class="map-card" href="https://www.themirror.com/news/politics/heres-how-newyorkers-voted-early-1482510" target="_blank">
+              <div class="map-embed-wrap">
+                <iframe title="Early voter turnout" src="https://datawrapper.dwcdn.net/8FRfN/4/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
+              </div>
+              <div class="map-kicker">The Mirror · Elections</div>
+              <h3>Here's how New Yorkers voted early</h3>
+              <p>Cleaned and analyzed early voting data to reveal borough-level turnout patterns.</p>
+            </a>
+
+            <a class="map-card" href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" target="_blank">
+              <div class="map-embed-wrap">
+                <iframe title="NYC borough flip" src="https://datawrapper.dwcdn.net/RxbWv/4/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
+              </div>
+              <div class="map-kicker">The Mirror · Elections</div>
+              <h3>Inside the New York borough that flipped in elections</h3>
+              <p>Voting and demographic data combined to analyze political shifts at borough level.</p>
+            </a>
+
+            <a class="map-card" href="https://www.irishstar.com/news/ireland-news/map-catherine-connolly-election-data-36133882" target="_blank">
+              <div class="map-embed-wrap">
+                <iframe title="Ireland election" src="https://datawrapper.dwcdn.net/uCkys/3/" scrolling="no" height="260" style="border:none; min-width:100%;" data-external="1"></iframe>
+              </div>
+              <div class="map-kicker">Irish Star · Elections</div>
+              <h3>Map shows Catherine Connolly's election performance</h3>
+              <p>Constituency-level election results map breaking down voting patterns in Ireland.</p>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- rule -->
+        <div class="reach-rule"></div>
+
+        <!-- sidebar stories -->
+        <div class="sidebar-stories">
+          <a class="story-item" href="https://www.themirror.com/news/us-news/florida-sets-new-record-executions-1567022" target="_blank">
+            <div class="story-kicker">The Mirror · Data Reporting</div>
+            <div class="story-title">Florida sets new record for executions</div>
+            <div class="story-desc">Analyzed state execution data to reveal trends and context behind the record.</div>
+          </a>
+          <a class="story-item" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank">
+            <div class="story-kicker">The Mirror · Health Data</div>
+            <div class="story-title">State reports highest number of measles cases</div>
+            <div class="story-desc">Analyzed CDC data to track outbreak trends and state-level incidence.</div>
+          </a>
+          <a class="story-item" href="https://www.themirror.com/news/politics/us-behind-russia-nukes-data-1476456" target="_blank">
+            <div class="story-kicker">The Mirror · Defense Data</div>
+            <div class="story-title">US lags behind Russia in nuclear weapons, data shows</div>
+            <div class="story-desc">Used arms control datasets to compare nuclear stockpiles and spending trends.</div>
+          </a>
+          <a class="story-item" href="https://www.themirror.com/news/politics/stark-ice-data-shows-enormous-1471882" target="_blank">
+            <div class="story-kicker">The Mirror · Data Analysis</div>
+            <div class="story-title">ICE data shows surge in Illinois arrests — youngest detained aged 3</div>
+            <div class="story-desc">Investigated ICE arrest and deportation data in Illinois.</div>
+          </a>
+          <a class="story-item" href="https://www.themirror.com/news/politics/two-federal-agencies-gutted-hardest-1423721" target="_blank">
+            <div class="story-kicker">The Mirror · Data Reporting</div>
+            <div class="story-title">Two federal agencies gutted hardest under recent budget cuts</div>
+            <div class="story-desc">Investigated federal budget allocations and agencies most affected by cuts.</div>
+          </a>
+          <a class="story-item" href="https://www.themirror.com/news/us-news/protesters-drive-500-miles-speak-1413546" target="_blank">
+            <div class="story-kicker">The Mirror · Field Reporting</div>
+            <div class="story-title">Protesters drive 500 miles to speak out</div>
+            <div class="story-desc">Reported on protests in New York City on the anniversary of Oct. 7.</div>
+          </a>
+          <a class="story-item" href="https://www.the-express.com/news/politics/190155/sudans-forgotten-war-260000-people-on-brink-of-massacre" target="_blank">
+            <div class="story-kicker">The Express · Conflict Data</div>
+            <div class="story-title">Sudan's forgotten war: 260,000 people on brink of massacre</div>
+            <div class="story-desc">Interviewed experts to highlight Sudan crisis impacts.</div>
+          </a>
+        </div>
       </div>
     </div>
-    
-
   </section>
-  <!-- Featured Section -->
-<section id="featured">
-  <h2 class="section-heading">Featured</h2>
-  <div class="row">
-    <div class="col-md-12 mb-4">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="YouTube video" allowfullscreen></iframe>
+
+  <!-- DATA PROJECTS -->
+  <section id="data-projects">
+    <div class="wrap">
+      <div class="section-header">
+        <span class="section-label">Data Projects</span>
+        <span class="section-sub">Investigative &amp; Longform</span>
+        <span class="section-count">4 Projects</span>
+      </div>
+
+      <div class="projects-grid">
+        <a class="project-card" href="https://somaiyahhafeez.github.io/superfunds/" target="_blank">
+          <div class="card-img"><img src="images/superfund.webp" alt="Superfund sites New Jersey"></div>
+          <div class="card-kicker">Python · Pandas · Data Viz</div>
+          <h3>New Jersey's Toxic Legacy: Superfund Sites</h3>
+          <p>NJ has the highest number of superfund sites in the U.S., many containing uncontrolled toxic waste.</p>
+        </a>
+
+        <a class="project-card" href="https://somaiyahhafeez.github.io/balochistan/" target="_blank">
+          <div class="card-img"><img src="images/baloch-missing.png" alt="Balochistan disappearances"></div>
+          <div class="card-kicker">Scraping · R · Data Viz</div>
+          <h3>The Lesser Known War: Balochistan's Struggle For Its Disappeared</h3>
+          <p>Amid decades of enforced disappearances, Baloch families march for justice.</p>
+        </a>
+
+        <a class="project-card" href="https://somaiyahhafeez.github.io/usaid/" target="_blank">
+          <div class="card-img"><img src="images/usaid.png" alt="USAID cuts"></div>
+          <div class="card-kicker">Python · Data Visualization</div>
+          <h3>USAID's Uncertain Future Risks Global Aid</h3>
+          <p>President Trump's drastic cuts to USAID funding jeopardize global aid, sparking controversy.</p>
+        </a>
+
+        <a class="project-card" href="https://somaiyahhafeez.github.io/pahalgam/" target="_blank">
+          <div class="card-img"><img src="images/map.png" alt="India Pakistan Kashmir conflict"></div>
+          <div class="card-kicker">Mapbox Storytelling · Data Viz</div>
+          <h3>Rival Countries India and Pakistan Fought After a Terror Attack in Kashmir</h3>
+          <p>The dramatic flare-up between the nuclear countries was sparked by a deadly attack on Hindu tourists.</p>
+        </a>
       </div>
     </div>
-    
-    <div class="col-md-12 mb-4">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="YouTube video" allowfullscreen></iframe>
-      </div>
-    </div>
-    
-    <div class="col-md-12 mb-4">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="YouTube video" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- About Section -->
-  <section id="about" class="mt-5">
-    <h2 class="section-heading">About</h2>
-    <p>
-      I'm a data journalist and reporter at Reach PLC, based in New York City. With a Master's degree in Data Journalism from Columbia University, I focus on stories that use data to illuminate human rights issues, climate change impacts, and political developments.
-    </p>
-    <p>
-      My work has appeared in international publications including The Guardian, New Lines Magazine, The New Humanitarian, and The Diplomat. In 2024, I was honored to be selected as a finalist for the Thomson Foundation's Young Journalist Award.
-    </p>
-    <p>
-      I'm passionate about using both traditional reporting methods and data analysis to uncover stories that might otherwise remain untold, particularly from marginalized communities.
-    </p>
   </section>
-  <!-- Accolades Section -->
-<section id="accolades">
-  <h2 class="section-heading">Accolades</h2>
-  <div class="row">
-    <div class="col-lg-3">
-      <a href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/" class="project-item">
-        <h3 class="project-title">Finalist, Young Journalist of the Year 2024</h3>
-        <p class="project-description">Recognized by the Thomson Foundation for outstanding journalistic work as an emerging talent.</p>
-        <span class="project-tag">Thomson Foundation</span>
-      </a>
-    </div>
-    
-    <div class="col-lg-3">
-      <a href="https://www.iba.edu.pk/iba-karachi-hosts-7th-icrc-humanitarian-reporting-awards.php" class="project-item">
-        <h3 class="project-title">ICRC Humanitarian Reporting Awards</h3>
-        <p class="project-description">Honored at the 7th International Committee of the Red Cross Humanitarian Reporting Awards.</p>
-        <span class="project-tag">ICRC</span>
-      </a>
-    </div>
-    
-    <div class="col-lg-3">
-      <a href="https://thewholestory.solutionsjournalism.org/announcing-the-2023-solutions-journalism-network-award-winners-b047acdc3a26" class="project-item"> 
-        <h3 class="project-title">Solutions Journalism Network Award 2023</h3> 
-        <p class="project-description">Recognized for excellence in solutions-focused journalism that highlights responses to social problems.</p>
-        <span class="project-tag">Solutions Journalism Network</span>
-      </a>
-    </div>
-    
-    <div class="col-lg-3">
-      <a href="https://sopawards.com/the-sopa-awards/awards-finalists/" class="project-item">
-        <h3 class="project-title">Honorable Mention, The Society of Publishers in Asia (SOPA) Awards 2025</h3> 
-        <p class="project-description">Awarded for my data-driven piece on enforced disappearances in Balochistan for Kontinentalist. </p>
-        <p class="project-description"> Judges comment: "A comprehensive explanatory piece that makes great use of graphics to lay out the history of the Balochistan conflict as well as how enforced disappearances have gone up during this time."</p>
-        <span class="project-tag">SOPA Awards</span>
-      </a>
-    </div>
-    
-  </div>
-</section>
-</div>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="social-icons">
-      <a href="mailto:sh4625@columbia.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://github.com/somaiyahh" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://x.com/sommulbaloch" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-    <p>&copy; 2026 Somaiyah Hafeez. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- FREELANCE -->
+  <section id="freelance">
+    <div class="wrap">
+      <div class="section-header">
+        <span class="section-label">Freelance Work</span>
+        <span class="section-sub">International Publications</span>
+        <span class="section-count">12 Stories</span>
+      </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="freelance-grid">
+        <a class="fl-card" href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">
+          <div class="card-img"><img src="images/3984.jpg" alt="House of Love Karachi"></div>
+          <div class="pub-tag">The Guardian</div>
+          <h3>'House of love': the creative space changing young lives in Karachi</h3>
+          <p>In Lyari, a slum notorious for violence, Mehr Ghar offers young people a safe place.</p>
+        </a>
+
+        <a class="fl-card" href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" target="_blank">
+          <div class="card-img"><img src="images/kontinentalist.png" alt="Balochistan disappearances"></div>
+          <div class="pub-tag">Kontinentalist</div>
+          <h3>Pakistan's Untold War: No Justice for Balochistan's Disappeared</h3>
+          <p>In Pakistan, thousands are abducted by state forces and tortured in unknown locations.</p>
+        </a>
+
+        <a class="fl-card" href="https://www.cjr.org/tow_center/courier-newsroom-spent-big-on-a-meta-ad-blitz-in-october.php" target="_blank">
+          <div class="card-img"><img src="images/courier-newsroom-1.jpg" alt="Courier Newsroom Meta ads"></div>
+          <div class="pub-tag">Columbia Journalism Review</div>
+          <h3>Courier Newsroom Spent Big on a Meta Ad Blitz in October</h3>
+          <p>The $6M+ the progressive 'newsroom' spent on Meta lagged only Trump and Harris campaigns.</p>
+        </a>
+
+        <a class="fl-card" href="https://newlinesmag.com/reportage/why-baloch-women-in-pakistan-led-an-unprecedented-march/" target="_blank">
+          <div class="card-img"><img src="images/baloch-women.jpg" alt="Baloch women march"></div>
+          <div class="pub-tag">New Lines Magazine</div>
+          <h3>Why Baloch Women in Pakistan Led An Unprecedented March</h3>
+          <p>Protesting against enforced disappearances and extrajudicial killings in a remote province.</p>
+        </a>
+
+        <a class="fl-card" href="https://www.thenewhumanitarian.org/news-feature/2024/05/22/afghans-fear-life-both-sides-durand-line" target="_blank">
+          <div class="card-img"><img src="images/afghan-families-chaman.jpg" alt="Afghans Durand Line"></div>
+          <div class="pub-tag">The New Humanitarian</div>
+          <h3>Afghans Fear Life on Both Sides of the Durand Line</h3>
+          <p>'I'd rather die in Pakistan than go back to Afghanistan.'</p>
+        </a>
+
+        <a class="fl-card" href="https://www.thenewhumanitarian.org/analysis/2023/09/19/pakistan-flood-victims-emerging-hunger-hotspots" target="_blank">
+          <div class="card-img"><img src="images/food-insecurity.jpg" alt="Pakistan flood hunger"></div>
+          <div class="pub-tag">The New Humanitarian</div>
+          <h3>For Pakistan Flood Victims, Crises Collide to Fuel Growing Hunger</h3>
+          <p>'We cook the same vegetables almost every day... and haven't had meat in months.'</p>
+        </a>
+
+        <a class="fl-card" href="https://newlinesmag.com/spotlight/afghan-refugees-born-in-pakistan-are-leaving-their-lives-for-the-unknown/" target="_blank">
+          <div class="card-img"><img src="images/rahmat-zaman.jpg" alt="Afghan refugees Pakistan"></div>
+          <div class="pub-tag">New Lines Magazine</div>
+          <h3>Afghan Refugees Born in Pakistan Are Leaving Their Lives for the Unknown</h3>
+          <p>As 'unauthorized' refugees are forced to cross the border, many lament being sent to a country they know nothing about.</p>
+        </a>
+
+        <a class="fl-card" href="https://dialogue.earth/en/climate/after-floods-pakistan-resilient-housing/" target="_blank">
+          <div class="card-img"><img src="images/climate-housing.jpg" alt="Pakistan resilient housing"></div>
+          <div class="pub-tag">The Third Pole</div>
+          <h3>After Successive Floods, Pakistan Is Forced to Consider Resilient Housing</h3>
+          <p>An architect's innovative model for flood-resilient homes shows the way forward.</p>
+        </a>
+
+        <a class="fl-card" href="https://thediplomat.com/2022/08/pakistans-deadly-floods-are-an-annual-occurrence/" target="_blank">
+          <div class="card-img"><img src="images/thediplomat_2022-08-02-192817.jpg" alt="Pakistan floods Diplomat"></div>
+          <div class="pub-tag">The Diplomat</div>
+          <h3>Pakistan's Deadly Floods Are an Annual Occurrence</h3>
+          <p>Why does Karachi flood almost every year during the monsoon season?</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video">
+    <div class="wrap">
+      <div class="section-header">
+        <span class="section-label">Video</span>
+        <span class="section-sub">Featured Broadcasts</span>
+        <span class="section-count">3 Videos</span>
+      </div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="ratio"><iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="YouTube" allowfullscreen></iframe></div>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Featured Broadcast</h3>
+        </div>
+        <div class="video-card">
+          <div class="ratio"><iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="YouTube" allowfullscreen></iframe></div>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Featured Broadcast</h3>
+        </div>
+        <div class="video-card">
+          <div class="ratio"><iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="YouTube" allowfullscreen></iframe></div>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Featured Broadcast</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISC CHARTS -->
+  <section id="charts">
+    <div class="wrap">
+      <div class="section-header">
+        <span class="section-label">Standalone Charts</span>
+        <span class="section-sub">Quick-turn Visualizations</span>
+        <span class="section-count">6 Charts</span>
+      </div>
+      <div class="charts-grid">
+        <div class="chart-item"><img src="images/Charlie-kirk.png" alt="Charlie Kirk locator map"></div>
+        <div class="chart-item"><img src="images/Donald-Trump.png" alt="Age of Presidents"></div>
+        <div class="chart-item"><img src="images/ICE-NYC.png" alt="ICE arrests NYC"></div>
+        <div class="chart-item"><img src="images/Texas-measles.png" alt="Texas measles"></div>
+        <div class="chart-item"><img src="images/executive-orders.png" alt="Executive orders"></div>
+        <div class="chart-item"><img src="images/inflation.png" alt="Inflation"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOLADES -->
+  <div class="accolades-strip" id="accolades">
+    <div class="accolades-inner">
+      <div class="accolades-label">Recognition &amp; Awards</div>
+      <div class="accolades-grid">
+        <a class="ac-item" href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/" target="_blank">
+          <div class="ac-org">Thomson Foundation</div>
+          <h3>Finalist, Young Journalist of the Year 2024</h3>
+          <p>Recognized for outstanding journalistic work as an emerging talent in international reporting.</p>
+        </a>
+        <a class="ac-item" href="https://www.iba.edu.pk/iba-karachi-hosts-7th-icrc-humanitarian-reporting-awards.php" target="_blank">
+          <div class="ac-org">ICRC</div>
+          <h3>Humanitarian Reporting Award</h3>
+          <p>Honored at the 7th International Committee of the Red Cross Humanitarian Reporting Awards.</p>
+        </a>
+        <a class="ac-item" href="https://thewholestory.solutionsjournalism.org/announcing-the-2023-solutions-journalism-network-award-winners-b047acdc3a26" target="_blank">
+          <div class="ac-org">Solutions Journalism Network</div>
+          <h3>SJN Award 2023</h3>
+          <p>Recognized for excellence in solutions-focused journalism highlighting responses to social problems.</p>
+        </a>
+        <a class="ac-item" href="https://sopawards.com/the-sopa-awards/awards-finalists/" target="_blank">
+          <div class="ac-org">SOPA Awards 2025</div>
+          <h3>Honorable Mention</h3>
+          <p>"A comprehensive explanatory piece that makes great use of graphics to lay out the history of the Balochistan conflict." — Judges</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Somaiyah Hafeez</div>
+        <div class="footer-copy">Data Journalist &amp; Reporter · New York City · sh4625@columbia.edu</div>
+      </div>
+      <div class="footer-icons">
+        <a href="mailto:sh4625@columbia.edu" title="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://github.com/somaiyahhafeez" title="GitHub" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" title="LinkedIn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://x.com/sommulbaloch" title="X / Twitter" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nav highlight on scroll -->
+  <script>
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.kicker-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // smooth scroll
+    navLinks.forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const offset = document.querySelector('.kicker-nav').offsetHeight + 12;
+            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
