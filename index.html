@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Somaiyah Hafeez | Journalist & Data Reporter</title>
-  <meta name="description" content="Portfolio of Somaiyah Hafeez — journalist covering human rights, climate change, immigration, and balochistan.">
+  <meta name="description" content="Data journalist and reporter at Reach Plc covering conflict, immigration, and public health through data analysis and visualization.">
   <meta name="author" content="Somaiyah Hafeez">
 
   <meta property="og:title" content="Somaiyah Hafeez | Journalist & Data Reporter">
-  <meta property="og:description" content="journalist covering human rights, climate change, immigration, and balochistan.">
+  <meta property="og:description" content="Data journalist and reporter at Reach Plc covering conflict, immigration, and public health through data analysis and visualization.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://somaiyahhafeez.github.io/">
   <meta property="og:image" content="https://somaiyahhafeez.github.io/images/somaiyah_favicon.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Somaiyah Hafeez | Journalist & Data Reporter">
-  <meta name="twitter:description" content="Journalist covering human rights, climate change, immigration, and balochistan.">
+  <meta name="twitter:description" content="Data journalist and reporter at Reach Plc covering conflict, immigration, and public health through data analysis and visualization.">
   <meta name="twitter:image" content="https://somaiyahhafeez.github.io/images/somaiyah_favicon.png">
 
   <link rel="icon" type="image/png" href="images/somaiyah_favicon.png">
@@ -43,7 +43,6 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- CHANGE 1: Added Eczar for the name -->
   <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -77,13 +76,11 @@
     a { color: inherit; text-decoration: none; }
     img { display: block; width: 100%; }
 
-    /* ─── TOP RULE ─── */
     .top-rule {
       height: 4px;
       background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
     }
 
-    /* ─── MASTHEAD ─── */
     .masthead {
       border-bottom: 1px solid var(--rule);
       padding: 0 clamp(1.5rem, 5vw, 6rem);
@@ -170,14 +167,12 @@
       border-bottom-color: var(--accent);
     }
 
-    /* ─── WRAPPER ─── */
     .wrap {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 clamp(1.5rem, 5vw, 6rem);
     }
 
-    /* ─── HERO ─── */
     .hero {
       padding: 3rem 0 2.5rem;
       border-bottom: 3px double var(--rule);
@@ -231,7 +226,6 @@
     .btn-filled { background: var(--accent); border-color: var(--accent); color: #fff; }
     .btn-filled:hover { background: #a8320e; border-color: #a8320e; color:#fff; }
 
-    /* ─── SECTION HEADER ─── */
     .section-header {
       display: flex;
       align-items: baseline;
@@ -263,7 +257,6 @@
       color: var(--mid);
     }
 
-    /* ─── REACH CARD GRID ─── */
     .reach-card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -288,7 +281,6 @@
       justify-content: center;
     }
 
-    /* CHANGE 3: contain so full chart shows, no cropping */
     .rc-img img {
       width: 100%; height: 100%;
       object-fit: contain;
@@ -370,7 +362,6 @@
       .reach-card-grid { grid-template-columns: 1fr; }
     }
 
-    /* ─── DATA PROJECTS ─── */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -424,7 +415,6 @@
       line-height: 1.5;
     }
 
-    /* ─── FREELANCE ─── */
     .freelance-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -470,7 +460,6 @@
       line-height: 1.5;
     }
 
-    /* ─── ACCOLADES STRIP ─── */
     .accolades-strip {
       background: var(--ink);
       color: var(--cream);
@@ -507,8 +496,6 @@
       gap: 2rem;
     }
 
-    .ac-item {}
-
     .ac-item .ac-org {
       font-family: var(--ff-mono);
       font-size: 9px;
@@ -532,14 +519,11 @@
       line-height: 1.6;
     }
 
-    /* ─── VIDEO SECTION ─── */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
-
-    .video-card {}
 
     .video-card .ratio {
       position: relative;
@@ -563,7 +547,6 @@
       color: var(--ink);
     }
 
-    /* ─── MISC CHARTS ─── */
     .charts-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -584,7 +567,6 @@
     }
     .chart-item:hover img { transform: scale(1.02); }
 
-    /* ─── FOOTER ─── */
     .site-footer {
       margin-top: 5rem;
       border-top: 3px double var(--rule);
@@ -635,7 +617,6 @@
 
     .footer-icons svg { width:16px; height:16px; fill:currentColor; }
 
-    /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from { opacity:0; transform:translateY(18px); }
       to   { opacity:1; transform:translateY(0); }
@@ -647,7 +628,6 @@
     .hero-cta-row { animation: fadeUp .55s .22s ease both; }
     .hero-sidebar { animation: fadeUp .55s .28s ease both; }
 
-    /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
       .reach-layout { grid-template-columns: 1fr; }
       .reach-rule { display:none; }
@@ -679,16 +659,14 @@
 </head>
 <body>
 
-  <!-- top rule -->
   <div class="top-rule"></div>
 
-  <!-- MASTHEAD -->
   <header class="masthead">
     <div class="masthead-inner">
       <span class="masthead-date">Data Journalist &amp; Reporter · New York City</span>
       <a href="#" class="masthead-name">Somaiyah Hafeez</a>
       <nav class="masthead-links">
-        <a href="/cdn-cgi/l/email-protection#9be8f3afada9aedbf8f4f7eef6f9f2fab5feffee">Email</a>
+        <a href="mailto:sh4625@columbia.edu">Email</a>
         <a href="https://github.com/somaiyahhafeez" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/somaiyah-hafeez-520705269/" target="_blank">LinkedIn</a>
         <a href="https://x.com/sommulbaloch" target="_blank">X</a>
@@ -697,7 +675,6 @@
     </div>
   </header>
 
-  <!-- KICKER NAV -->
   <nav class="kicker-nav">
     <div class="kicker-nav-inner">
       <a href="#reach">Reach Plc</a>
@@ -712,13 +689,13 @@
   <!-- HERO -->
   <section class="hero" id="about">
     <div class="wrap">
-      <p class="hero-kicker">Columbia University · M.S. Data Journalism</p>
+      <p class="hero-kicker">Columbia University · M.S. Data Journalism · NUST · B.S. Physics (President's Gold Medal)</p>
       <p class="hero-body">
-        I'm a data journalist and reporter at <strong>Reach Plc</strong>, producing breaking news and data-driven investigations using public records, analysis, and visualization. Before moving to New York, I worked as a freelance journalist in Pakistan. My work has appeared in <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">The Guardian</a>, <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" target="_blank">New Lines Magazine</a>, <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" target="_blank">The New Humanitarian</a>, and <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" target="_blank">The Diplomat</a>. I cover human rights, climate, immigration, and Balochistan.
+        I'm a data journalist and reporter at <strong>Reach Plc</strong>, producing breaking news and data-driven stories using public records, original analysis, and visualization. I hold a B.S. in Physics from the National University of Sciences and Technology (NUST) and an M.S. in Data Journalism from Columbia University. Before moving to New York, I worked as a freelance journalist in Pakistan. My work has appeared in <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">The Guardian</a>, <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" target="_blank">New Lines Magazine</a>, <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" target="_blank">The New Humanitarian</a>, and <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" target="_blank">The Diplomat</a>. I cover human rights, conflict, immigration, and data.
       </p>
       <div class="hero-cta-row">
         <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
-        <a href="/cdn-cgi/l/email-protection#9fecf7aba9adaadffcf0f3eaf2fdf6feb1fafbea" class="btn">Get in Touch</a>
+        <a href="mailto:sh4625@columbia.edu" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -729,10 +706,40 @@
       <div class="section-header">
         <span class="section-label">Reach Plc</span>
         <span class="section-sub">The Mirror · Irish Star · The Express</span>
-        <span class="section-count">Selected Work</span>
+        <span class="section-count">13 Stories</span>
       </div>
 
       <div class="reach-card-grid">
+
+        <!-- NEW: Tourism decline map -->
+        <a class="rc-card" href="https://www.themirror.com/news/us-news/stark-interactive-map-lays-bare-1856022" target="_blank">
+          <div class="rc-img"><img src="images/tourism-map.png" alt="ICE arrests New York"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Exclusive · Data Analysis</div>
+            <h3>Interactive map: mass decline in US visitors from major countries</h3>
+            <p>Original analysis of post-inauguration tourism decline across 30+ countries using national travel data.</p>
+          </div>
+        </a>
+
+        <!-- NEW: Iran war unpopularity -->
+        <a class="rc-card" href="https://www.themirror.com/news/politics/eye-opening-graphic-shows-how-1814197" target="_blank">
+          <div class="rc-img"><img src="images/iran-popularity-chart.png" alt="ICE arrests New York"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Analysis</div>
+            <h3>Iran war is most unpopular conflict in 76 years — more than Vietnam</h3>
+            <p>Historical polling comparison across seven decades of U.S. military conflicts.</p>
+          </div>
+        </a>
+
+        <!-- NEW: ACLED Iran strikes map -->
+        <a class="rc-card" href="https://www.themirror.com/news/us-news/exclusive-map-shows-huge-number-1763887" target="_blank">
+          <div class="rc-img"><img src="images/iran-war-map.png" alt="ICE arrests New York"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Exclusive · Conflict Data</div>
+            <h3>Map: 2,297 US-Israeli strike events on Iran across 29 provinces</h3>
+            <p>Mapped U.S.-Israeli strikes using ACLED conflict monitoring data as war passed one month.</p>
+          </div>
+        </a>
 
         <a class="rc-card" href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" target="_blank">
           <div class="rc-img"><img src="images/ice-nyc.png" alt="ICE arrests New York"></div>
@@ -807,15 +814,6 @@
             <div class="rc-kicker">The Mirror · Defense Data</div>
             <h3>US lags behind Russia in nuclear weapons, data shows</h3>
             <p>Used arms control datasets to compare nuclear stockpiles and spending trends.</p>
-          </div>
-        </a>
-
-        <a class="rc-card" href="https://www.themirror.com/news/politics/stark-ice-data-shows-enormous-1471882" target="_blank">
-          <div class="rc-img"><img src="images/ice.png" alt="ICE Illinois arrests"></div>
-          <div class="rc-body">
-            <div class="rc-kicker">The Mirror · Data Analysis</div>
-            <h3>ICE data shows surge in Illinois arrests — youngest detained aged 3</h3>
-            <p>Investigated ICE arrest and deportation data in Illinois.</p>
           </div>
         </a>
 
@@ -969,15 +967,15 @@
       <div class="video-grid">
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;"></h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Sammi Deen Baloch at the United Nations</h3>
         </div>
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;"></h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Baloch Long March for the Disappeared</h3>
         </div>
         <div class="video-card">
           <div class="ratio"><iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="YouTube" allowfullscreen></iframe></div>
-          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;"></h3>
+          <h3 style="margin-top:.65rem; font-family:var(--ff-serif); font-size:.9rem; font-weight:700; line-height:1.35;">Pakistan Floods: Communities on the Frontline</h3>
         </div>
       </div>
     </div>
@@ -998,6 +996,15 @@
         <div class="chart-item"><img src="images/Texas-measles.png" alt="Texas measles"></div>
         <div class="chart-item"><img src="images/executive-orders.png" alt="Executive orders"></div>
         <div class="chart-item"><img src="images/inflation.png" alt="Inflation"></div>
+        <div class="rc-img"><img src="images/oil-reserves.png" alt="oil reserves"></div>
+        <div class="rc-img"><img src="images/ebola-map.png" alt="Ebola"></div>
+        <div class="rc-img"><img src="images/iran-map.png" alt="Iran"></div>
+
+        
+
+        
+
+        
       </div>
     </div>
   </section>
@@ -1036,10 +1043,10 @@
     <div class="footer-inner">
       <div>
         <div class="footer-name">Somaiyah Hafeez</div>
-        <div class="footer-copy">Data Journalist &amp; Reporter · New York City · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2b1aaf6f4f0f782a1adaeb7afa0aba3eca7a6b7">[email&#160;protected]</a></div>
+        <div class="footer-copy">Data Journalist &amp; Reporter · New York City · sh4625@columbia.edu</div>
       </div>
       <div class="footer-icons">
-        <a href="/cdn-cgi/l/email-protection#e2918ad6d4d0d7a2818d8e978f808b83cc878697" title="Email">
+        <a href="mailto:sh4625@columbia.edu" title="Email">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
         <a href="https://github.com/somaiyahhafeez" title="GitHub" target="_blank">
@@ -1055,7 +1062,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const sections = document.querySelectorAll('section[id], div[id]');
     const navLinks = document.querySelectorAll('.kicker-nav a');
 
