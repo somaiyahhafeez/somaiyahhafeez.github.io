@@ -62,6 +62,11 @@
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
+    .rc-series { cursor: default; }
+.rc-series-list { list-style: none; padding: 0; margin: .6rem 0 0; }
+.rc-series-list li { margin-bottom: .45rem; font-size: 11px; line-height: 1.45; }
+.rc-series-list a { color: var(--accent2); border-bottom: 1px solid currentColor; }
+.rc-series-list a:hover { color: var(--accent); }
 
     body {
       font-family: var(--ff-sans);
@@ -86,6 +91,7 @@
       padding: 0 clamp(1.5rem, 5vw, 6rem);
       background: #fff;
     }
+    
 
     .masthead-inner {
       max-width: 1280px;
@@ -708,6 +714,19 @@
       </div>
 
       <div class="reach-card-grid">
+              <div class="rc-card rc-series">
+        <div class="rc-img"><img src="images/.jpg" alt="Ohio data center reporting series"></div>
+        <div class="rc-body">
+          <div class="rc-kicker">The Mirror · On-the-Ground Reporting · Ohio · Series</div>
+          <h3>The Data Center Boom in Ohio</h3>
+          <p>Reported from Ohio on how data center development is reshaping communities, from retirees to farmland to the midterm vote.</p>
+          <ul class="rc-series-list">
+            <li><a href="https://www.themirror.com/news/us-news/nothing-chaos-how-data-center-2068586" target="_blank">'Nothing but chaos': How the data center boom is ruining the Midwest retirement dream</a></li>
+            <li><a href="https://www.themirror.com/news/us-news/ohio-trump-supporters-going-democratic-2068868" target="_blank">Ohio Trump supporters push back on data centers ahead of critical midterm elections</a></li>
+            <li><a href="https://www.themirror.com/news/us-news/its-been-done-us-ohioans-2068978" target="_blank">'It's been done to us': Ohioans fight data centers, from a former uranium plant to the farm fields</a></li>
+          </ul>
+        </div>
+      </div>
 
       <a class="rc-card" href="https://www.themirror.com/news/us-news/russia-raked-billions-fuel-export-1933419" target="_blank">
           <div class="rc-img"><img src="images//russia-map.png" alt="ICE arrests New York"></div>
