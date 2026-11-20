@@ -573,6 +573,14 @@
     }
     .chart-item:hover img { transform: scale(1.02); }
 
+    .chart-item { margin: 0; display: flex; flex-direction: column; }
+    .chart-item figcaption {
+      font-family: var(--ff-mono); font-size: 9px; letter-spacing: .06em; line-height: 1.5;
+      color: var(--mid); padding: .5rem .65rem .6rem; border-top: 1px solid var(--rule); background: #fff; margin-top: auto;
+    }
+    .hero-tools { font-family: var(--ff-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--mid); margin: -.75rem 0 1.5rem; }
+    .hero-tools strong { color: var(--ink); font-weight: 500; }
+
     .site-footer {
       margin-top: 5rem;
       border-top: 3px double var(--rule);
@@ -683,8 +691,8 @@
 
   <nav class="kicker-nav">
     <div class="kicker-nav-inner">
-      <a href="#reach">Reach Plc</a>
       <a href="#data-projects">Data Projects</a>
+      <a href="#reach">Reach Plc</a>
       <a href="#freelance">Freelance</a>
       <a href="#video">Video</a>
       <a href="#charts">Charts</a>
@@ -698,6 +706,8 @@
       <p class="hero-kicker">Columbia University · M.S. Data Journalism · NUST · B.S. Physics (President's Gold Medal)</p>
       <p class="hero-body">
         I'm a data journalist and reporter at <strong>Reach Plc</strong>, producing breaking news and data-driven stories using public records, original analysis, and visualization. I hold a B.S. in Physics from the National University of Sciences and Technology (NUST) and an M.S. in Data Journalism from Columbia University. Before moving to New York, I worked as a freelance journalist in Pakistan. My work has appeared in <a href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank">The Guardian</a>, <a href="https://newlinesmag.com/writers/somaiyah-hafeez/" target="_blank">New Lines Magazine</a>, <a href="https://www.thenewhumanitarian.org/authors/somaiyah-hafeez" target="_blank">The New Humanitarian</a>, and <a href="https://thediplomat.com/authors/somaiyah-hafeez/posts/1/" target="_blank">The Diplomat</a>. I cover the intersection of politics, economics, public policy and human stories through data and reporting.
+      </p>
+      <p class="hero-tools"><strong>Tools:</strong> Python (pandas) · R · Datawrapper · Mapbox · GitHub Actions · Illustrator</p>
       <div class="hero-cta-row">
         <a href="Resume/Somaiyah_Hafeez_Resume.pdf" class="btn btn-filled" target="_blank">Download Résumé</a>
         <a href="mailto:sh4625@columbia.edu" class="btn">Get in Touch</a>
@@ -715,9 +725,7 @@
 
       <div class="reach-card-grid">
       <div class="rc-card rc-series">
-        <div class="rc-img rc-img--video">
-          <div class="rc-img"><img src="images/data_centers.png" alt="ICE arrests New York"></div>
-        </div>
+        <div class="rc-img"><img src="images/data_centers.png" alt="Ohio data center series" loading="lazy"></div>
         <div class="rc-body">
           <div class="rc-kicker">The Mirror · On-the-Ground Reporting · Ohio · Series</div>
           <h3>The Data Center Boom in Ohio</h3>
@@ -731,8 +739,40 @@
         </div>
       </div>
 
+
+        <!-- NEW: 120th Senate ages -->
+        <a class="rc-card" href="https://www.themirror.com/news/politics/how-incoming-wave-democrats-breaking-2107882" target="_blank">
+          <div class="rc-img"><img src="images/senate-119-vs-120.jpg" alt="Age breakdown of the 119th and 120th Senate" loading="lazy"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Data Analysis · Data Visualization</div>
+            <h3>The next Senate is full of historic firsts and is bringing down the average age as young Dems enter</h3> <!-- TODO: replace with exact Mirror headline -->
+            <p>Compared senators' ages on swearing-in day: the 120th Senate has four more members in their 40s and two fewer in their 70s than the 119th.</p>
+          </div>
+        </a>
+
+        <!-- NEW: Measles elimination status -->
+        <a class="rc-card" href="https://www.themirror.com/news/health/loses-measles-elimination-status-after-2114055" target="_blank">
+          <div class="rc-img"><img src="images/measles-weekly-2026.jpg" alt="Weekly US measles cases, 2024 to 2026" loading="lazy"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Health Data · Data Visualization</div>
+            <h3>US loses its measles elimination status after 26 years - just 5 states are yet to report outbreak</h3> 
+            <p>Used CDC weekly case data to show that 2026 cases have already more than doubled all of 2000-2024.</p>
+          </div>
+        </a>
+
+
+        <a class="rc-card" href="https://www.themirror.com/news/us-news/build-people-not-greed-flatbush-2112566" target="_blank">
+          <div class="rc-img"><img src="images/flatbush.png" alt="" loading="lazy"></div>
+          <div class="rc-body">
+            <div class="rc-kicker">The Mirror · Reporting</div>
+            <h3>Protesters at site of Brooklyn building collapse demand ‘build for people, not greed’ after 8 deaths</h3>
+            <p>Demonstrators gathered at the site of the deadly building collapse, which killed 8, mostly immigrants, to demand accountability while firefighters and clergy held a vigil and tenants’ groups handed out food and supplies.</p>
+          </div>
+        </a>
+
+
       <a class="rc-card" href="https://www.themirror.com/news/us-news/russia-raked-billions-fuel-export-1933419" target="_blank">
-          <div class="rc-img"><img src="images//russia-map.png" alt="ICE arrests New York"></div>
+          <div class="rc-img"><img src="images/russia-map.png" alt="Map of Russian LNG imports into Europe"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Data Analysis . Data Visualization. </div>
             <h3>Russia has raked in billions from fuel export to the EU in 6 months, new analysis finds</h3>
@@ -741,7 +781,7 @@
         </a>
 
           <a class="rc-card" href="https://www.themirror.com/news/us-news/iran-war-already-cost-americans-1866456" target="_blank">
-          <div class="rc-img"><img src="images/inflation.png" alt="ICE arrests New York"></div>
+          <div class="rc-img"><img src="images/inflation.png" alt="US energy costs during the Iran war"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Data Analysis . Data Visualization. </div>
             <h3>US-Iran war has already cost Americans an extra $447.19 on energy costs</h3>
@@ -758,7 +798,7 @@
           </div>
         </a>
         <a class="rc-card" href="https://www.themirror.com/news/us-news/elon-musk-turns-55-fortune-1904064" target="_blank">
-          <div class="rc-img"><img src="images/wealth-inequality.png" alt="AQI"></div>
+          <div class="rc-img"><img src="images/wealth-inequality.png" alt="Elon Musk wealth versus US income inequality"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror . Data Analysis/Python. Data Visualization. </div>
             <h3>As Elon Musk turns 55, his fortune underscores the stark wealth inequality in the U.S.</h3>
@@ -768,7 +808,7 @@
           </div>
         </a>
         <a class="rc-card" href="https://www.themirror.com/news/politics/oldest-senate-ever-how-half-1936317" target="_blank">
-          <div class="rc-img"><img src="images/senators.png" alt="AQI"></div>
+          <div class="rc-img"><img src="images/senators.png" alt="Age of the 119th Senate"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror . Data Analysis/Python. Data Visualization. </div>
             <h3>Is this the oldest Senate ever? How half of the chamber has passed the retirement age</h3>
@@ -777,21 +817,9 @@
           </div>
         </a>
 
-        
-
-        <!-- NEW: Tourism decline map -->
-        <a class="rc-card" href="https://www.themirror.com/news/us-news/stark-interactive-map-lays-bare-1856022" target="_blank">
-          <div class="rc-img"><img src="images/tourism-map.png" alt="ICE arrests New York"></div>
-          <div class="rc-body">
-            <div class="rc-kicker">The Mirror · Exclusive · Data Analysis</div>
-            <h3>Interactive map: mass decline in US visitors from major countries</h3>
-            <p>Original analysis of post-inauguration tourism decline across 30+ countries using national travel data.</p>
-          </div>
-        </a>
-
         <!-- NEW: Iran war unpopularity -->
         <a class="rc-card" href="https://www.themirror.com/news/politics/eye-opening-graphic-shows-how-1814197" target="_blank">
-          <div class="rc-img"><img src="images/iran-popularity-chart.png" alt="ICE arrests New York"></div>
+          <div class="rc-img"><img src="images/iran-popularity-chart.png" alt="Iran war popularity compared with past conflicts"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Data Analysis</div>
             <h3>Iran war is most unpopular conflict in 76 years — more than Vietnam</h3>
@@ -801,7 +829,7 @@
 
         <!-- NEW: ACLED Iran strikes map -->
         <a class="rc-card" href="https://www.themirror.com/news/us-news/exclusive-map-shows-huge-number-1763887" target="_blank">
-          <div class="rc-img"><img src="images/iran-war-map.png" alt="ICE arrests New York"></div>
+          <div class="rc-img"><img src="images/iran-war-map.png" alt="Map of US-Israeli strikes on Iran"></div>
           <div class="rc-body">
             <div class="rc-kicker">The Mirror · Exclusive · Conflict Data</div>
             <h3>Map: 2,297 US-Israeli strike events on Iran across 29 provinces</h3>
@@ -850,15 +878,6 @@
           </div>
         </a>
 
-        <a class="rc-card" href="https://www.themirror.com/news/us-news/florida-sets-new-record-executions-1567022" target="_blank">
-          <div class="rc-img"><img src="images/executions.png" alt="Florida executions data"></div>
-          <div class="rc-body">
-            <div class="rc-kicker">The Mirror · Data Reporting</div>
-            <h3>Florida sets new record for executions</h3>
-            <p>Analyzed state execution data to reveal trends and context behind the record.</p>
-          </div>
-        </a>
-
         <a class="rc-card" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank">
           <div class="rc-img"><img src="images/measles.png" alt="Measles cases by state"></div>
           <div class="rc-body">
@@ -882,7 +901,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- DATA PROJECTS -->
   <section id="data-projects">
     <div class="wrap">
@@ -1029,24 +1048,21 @@
       <div class="section-header">
         <span class="section-label">Standalone Charts</span>
         <span class="section-sub">Quick-turn Visualizations</span>
-        <span class="section-count">6 Charts</span>
+        <span class="section-count">12 Charts</span>
       </div>
       <div class="charts-grid">
-        <div class="chart-item"><img src="images/Charlie-kirk.png" alt="Charlie Kirk locator map"></div>
-        <div class="chart-item"><img src="images/Donald-Trump.png" alt="Age of Presidents"></div>
-        <div class="chart-item"><img src="images/ICE-NYC.png" alt="ICE arrests NYC"></div>
-        <div class="chart-item"><img src="images/Texas-measles.png" alt="Texas measles"></div>
-        <div class="chart-item"><img src="images/executive-orders.png" alt="Executive orders"></div>
-        <div class="chart-item"><img src="images/senators.png" alt="Inflation"></div>
-        <div class="rc-img"><img src="images/oil-reserves.png" alt="oil reserves"></div>
-        <div class="rc-img"><img src="images/ebola-map.png" alt="Ebola"></div>
-        <div class="rc-img"><img src="images/iran-map.png" alt="Iran"></div>
-
-        
-
-        
-
-        
+        <figure class="chart-item"><img src="images/senate-age-dots-120th.jpg" alt="Ages of every senator in the incoming 120th Senate" loading="lazy"><figcaption>Incoming 120th Senate: every senator by age · AP, @unitedstates project</figcaption></figure>
+        <figure class="chart-item"><img src="images/trump-net-approval-map.png" alt="Map of Trump's net approval by state" loading="lazy"><figcaption>Trump's net approval by state, a week before the midterms · Civiqs</figcaption></figure>
+        <figure class="chart-item"><img src="images/manhole-incidents-monthly.png" alt="NYC manhole incidents by month" loading="lazy"><figcaption>NYC manhole incidents by month, 2005 to July 2026 · NYC Open Data</figcaption></figure>
+        <figure class="chart-item"><img src="images/Charlie-kirk.png" alt="Charlie Kirk locator map" loading="lazy"><figcaption>Locator map</figcaption></figure>
+        <figure class="chart-item"><img src="images/Donald-Trump.png" alt="Age of presidents" loading="lazy"><figcaption>Age of U.S. presidents</figcaption></figure>
+        <figure class="chart-item"><img src="images/ICE-NYC.png" alt="ICE arrests NYC" loading="lazy"><figcaption>ICE arrests in New York City</figcaption></figure>
+        <figure class="chart-item"><img src="images/Texas-measles.png" alt="Texas measles" loading="lazy"><figcaption>Texas measles cases</figcaption></figure>
+        <figure class="chart-item"><img src="images/executive-orders.png" alt="Executive orders" loading="lazy"><figcaption>Executive orders</figcaption></figure>
+        <figure class="chart-item"><img src="images/senators.png" alt="Age of the 119th Senate" loading="lazy"><figcaption>Age of the 119th Senate</figcaption></figure>
+        <figure class="chart-item"><img src="images/oil-reserves.png" alt="Oil reserves" loading="lazy"><figcaption>Oil reserves</figcaption></figure>
+        <figure class="chart-item"><img src="images/ebola-map.png" alt="Ebola map" loading="lazy"><figcaption>Ebola outbreak map</figcaption></figure>
+        <figure class="chart-item"><img src="images/iran-map.png" alt="Iran map" loading="lazy"><figcaption>Iran map</figcaption></figure>
       </div>
     </div>
   </section>
@@ -1063,12 +1079,12 @@
         </a>
         <a class="ac-item" href="https://www.iba.edu.pk/iba-karachi-hosts-7th-icrc-humanitarian-reporting-awards.php" target="_blank">
           <div class="ac-org">ICRC</div>
-          <h3>Humanitarian Reporting Award</h3>
-          <p>Honored at the 7th International Committee of the Red Cross Humanitarian Reporting Awards.</p>
+          <h3>Humanitarian Reporting Award, 2023</h3>
+          <p>Honored at the 7th ICRC–CEJ Humanitarian Reporting Awards for coverage of Pakistan's floods and food insecurity.</p>
         </a>
         <a class="ac-item" href="https://thewholestory.solutionsjournalism.org/announcing-the-2023-solutions-journalism-network-award-winners-b047acdc3a26" target="_blank">
           <div class="ac-org">Solutions Journalism Network</div>
-          <h3>SJN Award 2023</h3>
+          <h3>Honorable Mention</h3> <!-- verify year and award level -->
           <p>Recognized for excellence in solutions-focused journalism highlighting responses to social problems.</p>
         </a>
         <a class="ac-item" href="https://sopawards.com/the-sopa-awards/awards-finalists/" target="_blank">
