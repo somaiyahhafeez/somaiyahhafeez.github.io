@@ -210,6 +210,10 @@
     .foot-links a:hover { color: var(--marker); }
 
 
+    .hero-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, .75fr); align-items: start; }
+    .hero-photo { margin: 0; background: var(--card); border: 1px solid var(--rule); padding: .6rem .6rem 0; transform: rotate(1.5deg); }
+    .hero-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .hero-photo figcaption { padding: .8rem .35rem .9rem; font-style: italic; font-size: .98rem; color: var(--muted); line-height: 1.4; }
     .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
     .card-grid-4 { grid-template-columns: repeat(4, 1fr); }
     .card-grid .tile { height: 100%; }
@@ -227,7 +231,8 @@
 
     /* RESPONSIVE */
     @media (max-width: 1000px) {
-      .hero-grid { grid-template-columns: 1fr; }
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-photo { max-width: 22rem; transform: none; }
       .project-grid { grid-template-columns: repeat(2, 1fr); }
       .chart-cols { column-count: 2; }
       .tile-lead, .tile-side { grid-column: span 12; }
@@ -268,7 +273,7 @@
   </nav>
 
   <header class="hero" id="top">
-    <div class="wrap">
+    <div class="wrap hero-grid">
       <div>
         <h1>Somaiyah Hafeez</h1>
         <p class="hero-lede">I'm a data journalist at Reach Plc in New York. I cover conflict, immigration and public health with public records, original analysis and visualization.</p>
@@ -280,7 +285,10 @@
         </div>
       </div>
 
-      
+      <figure class="hero-photo">
+        <img src="images/somaiyah-birthday.jpg" alt="Somaiyah Hafeez smiling at a restaurant table, arms crossed, in a rust-colored top">
+        <figcaption>Another year older chasing stories</figcaption>
+      </figure>
     </div>
   </header>
 
@@ -509,16 +517,16 @@
         </div>
         <div class="video-grid">
           <div class="video-card">
-            <div class="ratio"><iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="Sammi Deen Baloch at the United Nations" loading="lazy" allowfullscreen></iframe></div>
-            <h3>Sammi Deen Baloch at the United Nations</h3>
+            <div class="ratio"><iframe src="https://www.youtube.com/embed/ueXGzjtbKDo" title="YJA" loading="lazy" allowfullscreen></iframe></div>
+            <h3>Thomson Foundations Young Journalist of the Year Award 2024 Finalist</h3>
           </div>
           <div class="video-card">
-            <div class="ratio"><iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="Baloch Long March for the Disappeared" loading="lazy" allowfullscreen></iframe></div>
-            <h3>Baloch Long March for the Disappeared</h3>
+            <div class="ratio"><iframe src="https://www.youtube.com/embed/WZ05T1aTtI0" title="BBC Urdu" loading="lazy" allowfullscreen></iframe></div>
+            <h3>Featured in BBC Urdu</h3>
           </div>
           <div class="video-card">
-            <div class="ratio"><iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="Pakistan Floods: Communities on the Frontline" loading="lazy" allowfullscreen></iframe></div>
-            <h3>Pakistan Floods: Communities on the Frontline</h3>
+            <div class="ratio"><iframe src="https://www.youtube.com/embed/tabgFS2lN-c" title="The Diplomat" loading="lazy" allowfullscreen></iframe></div>
+            <h3>Spoke to The Diplomat about Baloch Long March</h3>
           </div>
         </div>
       </div>
