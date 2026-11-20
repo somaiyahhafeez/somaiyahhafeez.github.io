@@ -114,8 +114,8 @@
       line-height: .95; letter-spacing: -.035em;
       margin-bottom: 1.5rem;
     }
-    .hero-lede { font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.45; max-width: 34ch; margin-bottom: 1.25rem; }
-    .hero-more { color: var(--muted); max-width: 52ch; margin-bottom: 1.5rem; }
+    .hero-lede { font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.45; max-width: 44ch; margin-bottom: 1.25rem; }
+    .hero-more { color: var(--muted); max-width: 64ch; margin-bottom: 1.5rem; }
     .hero-more a { color: var(--signal-dark); }
     .hero-tools { font-family: var(--ff-display); font-size: .9rem; color: var(--muted); margin-bottom: 1.75rem; }
     .hero-tools b { color: var(--ink); font-weight: 700; }
@@ -209,6 +209,22 @@
     .foot-links a { border-bottom: 2px solid var(--marker); padding-bottom: .1rem; }
     .foot-links a:hover { color: var(--marker); }
 
+
+    .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
+    .card-grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .card-grid .tile { height: 100%; }
+    .card-grid .tile-img { aspect-ratio: 4 / 3; }
+    .card-grid.cover .tile-img img { object-fit: cover; }
+    .tile-img video { width: 100%; height: 100%; object-fit: contain; }
+    .tile h3 { font-size: 1.05rem; }
+    .award-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .award-grid .award { display: flex; flex-direction: column; gap: .3rem; background: var(--card); border: 1px solid var(--rule); padding: 1.25rem; transition: border-color .15s; }
+    .award-grid .award:hover { border-color: var(--signal); }
+    .award-org { font-family: var(--ff-display); font-weight: 500; font-size: .9rem; color: var(--muted); }
+    .award-grid .award h3 { margin-top: .4rem; }
+    @media (max-width: 1000px) { .card-grid, .card-grid-4 { grid-template-columns: repeat(2, 1fr); } .award-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .card-grid, .card-grid-4, .award-grid { grid-template-columns: 1fr; } }
+
     /* RESPONSIVE */
     @media (max-width: 1000px) {
       .hero-grid { grid-template-columns: 1fr; }
@@ -241,9 +257,8 @@
     <div class="wrap nav-inner">
       <a class="nav-name" href="#top">Somaiyah Hafeez</a>
       <div class="nav-links">
-        <a href="#featured">Featured</a>
-        <a href="#projects">Projects</a>
         <a href="#reach">Reach Plc</a>
+        <a href="#data-projects">Data projects</a>
         <a href="#freelance">Freelance</a>
         <a href="#video">Video</a>
         <a href="#charts">Charts</a>
@@ -253,7 +268,7 @@
   </nav>
 
   <header class="hero" id="top">
-    <div class="wrap hero-grid">
+    <div class="wrap">
       <div>
         <h1>Somaiyah Hafeez</h1>
         <p class="hero-lede">I'm a data journalist at Reach Plc in New York. I cover conflict, immigration and public health with public records, original analysis and visualization.</p>
@@ -265,30 +280,26 @@
         </div>
       </div>
 
-      <figure class="hero-fig">
-        <img src="images/senate-120.jpeg" alt="Chart of senators' ages in the 119th and 120th Senate">
-        <figcaption>Average age of the Senate falls as young Democrats enter. <a class="tl" href="https://www.themirror.com/news/politics/how-incoming-wave-democrats-breaking-2107882" target="_blank" rel="noopener">Read the story in The Mirror</a></figcaption>
-      </figure>
+      
     </div>
   </header>
 
   <main>
 
-    <!-- FEATURED -->
-    <section id="featured">
+    <!-- REACH PLC -->
+    <section id="reach">
       <div class="wrap">
         <div class="sec-head">
-          <h2>Featured reporting</h2>
-          <p>Recent data stories for The Mirror, including an on-the-ground series from Ohio.</p>
+          <h2>Reach Plc</h2>
+          <p>The Mirror, Irish Star and The Express.</p>
         </div>
-
-        <div class="feature-grid">
-          <article class="tile tile-lead">
+        <div class="card-grid">
+          <article class="tile">
             <div class="tile-img"><img src="images/data_centers.png" alt="Ohio data center series" loading="lazy"></div>
             <div class="tile-body">
-              <span class="tag">Series · Reported from Ohio</span>
-              <h3>The data center boom in Ohio</h3>
-              <p>How data center development is reshaping communities, from retirees to farmland to the midterm vote.</p>
+              <span class="tag">Series, reported from Ohio</span>
+              <h3>The Data Center Boom in Ohio</h3>
+              <p>Reported from Ohio on how data center development is reshaping communities, from retirees to farmland to the midterm vote.</p>
               <ul class="series-links">
                 <li><a href="https://www.themirror.com/news/us-news/nothing-chaos-how-data-center-2068586" target="_blank" rel="noopener">'Nothing but chaos': How the data center boom is ruining the Midwest retirement dream</a></li>
                 <li><a href="https://www.themirror.com/news/us-news/ohio-trump-supporters-going-democratic-2068868" target="_blank" rel="noopener">Ohio Trump supporters push back on data centers ahead of critical midterm elections</a></li>
@@ -297,40 +308,116 @@
               </ul>
             </div>
           </article>
-
-          <a class="tile tile-side" href="https://www.themirror.com/news/us-news/build-people-not-greed-flatbush-2112566" target="_blank" rel="noopener">
-            <div class="tile-img"><img src="images/flatbush.png" alt="Protest at the site of the Flatbush building collapse" loading="lazy"></div>
+          <a class="tile" href="https://www.themirror.com/news/politics/how-incoming-wave-democrats-breaking-2107882" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/senate-120.jpeg" alt="Age breakdown of the 119th and 120th Senate" loading="lazy"></div>
             <div class="tile-body">
-              <span class="tag">On the ground</span>
-              <h3>Protesters at site of Brooklyn building collapse demand 'build for people, not greed' after 8 deaths</h3>
-              <p>Demonstrators gathered at the site of the deadly collapse, which killed 8, mostly immigrants, to demand accountability while firefighters and clergy held a vigil and tenants' groups handed out food and supplies.</p>
+              <span class="tag">Data Analysis, Data Visualization</span>
+              <h3>The next Senate is full of historic firsts and is bringing down the average age as young Dems enter</h3>
+              <p>Compared senators' ages on swearing-in day: the 120th Senate has four more members in their 40s and two fewer in their 70s than the 119th.</p>
             </div>
           </a>
-
-          <a class="tile tile-third" href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" target="_blank" rel="noopener">
-            <div class="tile-img"><img src="images/ice-nyc.png" alt="ICE arrests in New York" loading="lazy"></div>
+          <a class="tile" href="https://www.themirror.com/news/health/loses-measles-elimination-status-after-2114055" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/measles-weekly-2026.jpeg" alt="Weekly US measles cases, 2024 to 2026" loading="lazy"></div>
             <div class="tile-body">
-              <span class="tag">Data analysis</span>
+              <span class="tag">Health Data, Data Visualization</span>
+              <h3>US loses its measles elimination status after 26 years - just 5 states are yet to report outbreak</h3>
+              <p>Used CDC weekly case data to show that 2026 cases have already exceeded all cases from 2000 to 2024 combined.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/us-news/build-people-not-greed-flatbush-2112566" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/flatbush.png" alt="" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Reporting</span>
+              <h3>Protesters at site of Brooklyn building collapse demand ‘build for people, not greed’ after 8 deaths</h3>
+              <p>Demonstrators gathered at the site of the deadly building collapse, which killed 8, mostly immigrants, to demand accountability while firefighters and clergy held a vigil and tenants’ groups handed out food and supplies.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/us-news/russia-raked-billions-fuel-export-1933419" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/russia-map.png" alt="Map of Russian LNG imports into Europe" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Data Analysis, Data Visualization</span>
+              <h3>Russia has raked in billions from fuel export to the EU in 6 months, new analysis finds</h3>
+              <p>Data visualization and analysis of Europe's import of Russian LNG.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/us-news/iran-war-already-cost-americans-1866456" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/inflation.png" alt="US energy costs during the Iran war" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Data Analysis, Data Visualization</span>
+              <h3>US-Iran war has already cost Americans an extra $447.19 on energy costs</h3>
+              
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/us-news/new-york-state-air-quality-1940872" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/AQI.png" alt="AQI" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">GitHub Actions, Auto-updating, API, Data Visualization</span>
+              <h3>New York air quality mapped after levels spiked to beyond 'unhealthy' from Canadian wildfires</h3>
+              <p>Built an automated data pipeline using GitHub Actions to keep air quality data current in real time.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/us-news/elon-musk-turns-55-fortune-1904064" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/wealth-inequality.png" alt="Elon Musk wealth versus US income inequality" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Data Analysis/Python, Data Visualization</span>
+              <h3>As Elon Musk turns 55, his fortune underscores the stark wealth inequality in the U.S.</h3>
+              <p>Analyzed Musk's unprecedented wealth accumulation against U.S. income inequality data.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/politics/oldest-senate-ever-how-half-1936317" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/senators.png" alt="Age of the 119th Senate" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Data Analysis/Python, Data Visualization</span>
+              <h3>Is this the oldest Senate ever? How half of the chamber has passed the retirement age</h3>
+              <p>Analyzed Congressional age data to show a historic demographic shift in the U.S. Senate.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/us-news/exclusive-map-shows-huge-number-1763887" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/iran-war-map.png" alt="Map of US-Israeli strikes on Iran" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Exclusive, Conflict Data</span>
+              <h3>Map: 2,297 US-Israeli strike events on Iran across 29 provinces</h3>
+              <p>Mapped U.S.-Israeli strikes using ACLED conflict monitoring data as war passed one month.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/politics/alarming-trend-ice-arrest-data-1545635" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/ice-nyc.png" alt="ICE arrests New York" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Data Analysis</span>
               <h3>60% of ICE arrests in New York had no criminal charges</h3>
               <p>Analyzed the federal ICE arrest dataset across New York State.</p>
             </div>
           </a>
-
-          <a class="tile tile-third" href="https://www.themirror.com/news/us-news/exclusive-map-shows-huge-number-1763887" target="_blank" rel="noopener">
-            <div class="tile-img"><img src="images/iran-war-map.png" alt="Map of US-Israeli strikes on Iran" loading="lazy"></div>
+          <a class="tile" href="https://www.themirror.com/news/us-news/population-hits-340-million-250th-1913985" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/population.png" alt="US population 340 million" loading="lazy"></div>
             <div class="tile-body">
-              <span class="tag">Exclusive · Conflict data</span>
-              <h3>Map: 2,297 US-Israeli strike events on Iran across 29 provinces</h3>
-              <p>Mapped strikes using ACLED conflict monitoring data as the war passed one month.</p>
+              <span class="tag">Data Analysis</span>
+              <h3>U.S. population hits 340 million ahead of America's 250th birthday</h3>
+              <p>Analyzed Census population growth trends timed to the nation's semiquincentennial.</p>
             </div>
           </a>
-
-          <a class="tile tile-third" href="https://www.themirror.com/news/health/loses-measles-elimination-status-after-2114055" target="_blank" rel="noopener">
-            <div class="tile-img"><img src="images/measles-weekly-2026.jpeg" alt="Weekly US measles cases, 2024 to 2026" loading="lazy"></div>
+          <a class="tile" href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" target="_blank" rel="noopener">
+            <div class="tile-img"><video src="images/snap.mov" autoplay muted loop playsinline></video></div>
             <div class="tile-body">
-              <span class="tag">Health data</span>
-              <h3>US loses its measles elimination status after 26 years - just 5 states are yet to report outbreak</h3>
-              <p>Used CDC weekly case data to show that 2026 cases have already exceeded all cases from 2000 to 2024 combined.</p>
+              <span class="tag">Mapping</span>
+              <h3>Interactive map shows impact of SNAP benefits freeze</h3>
+              <p>Visualizing which states and counties are most affected by benefit freezes.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" target="_blank" rel="noopener">
+            <div class="tile-img"><video src="images/nyc-mamdani.mov" autoplay muted loop playsinline></video></div>
+            <div class="tile-body">
+              <span class="tag">Elections</span>
+              <h3>Inside the New York borough that flipped in elections</h3>
+              <p>Voting and demographic data combined to analyze political shifts at borough level.</p>
+            </div>
+          </a>
+          <a class="tile" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/measles.png" alt="Measles cases by state" loading="lazy"></div>
+            <div class="tile-body">
+              <span class="tag">Health Data</span>
+              <h3>State reports highest number of measles cases</h3>
+              <p>Analyzed CDC data to track outbreak trends and state-level incidence.</p>
             </div>
           </a>
         </div>
@@ -338,110 +425,28 @@
     </section>
 
     <!-- DATA PROJECTS -->
-    <section id="projects">
+    <section id="data-projects">
       <div class="wrap">
         <div class="sec-head">
           <h2>Data projects</h2>
           <p>Investigative and longform work built with code.</p>
         </div>
-        <div class="project-grid">
+        <div class="card-grid card-grid-4 cover">
           <a class="tile" href="https://somaiyahhafeez.github.io/superfunds/" target="_blank" rel="noopener">
-            <div class="tile-img"><img src="images/superfund.webp" alt="Superfund sites in New Jersey" loading="lazy"></div>
-            <div class="tile-body">
-              <span class="tag">Python, pandas, data viz</span>
-              <h3>New Jersey's toxic legacy: Superfund sites</h3>
-              <p>NJ has the highest number of Superfund sites in the U.S., many containing uncontrolled toxic waste.</p>
-            </div>
+            <div class="tile-img"><img src="images/superfund.webp" alt="Superfund sites New Jersey" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">Python, Pandas, Data Viz</span><h3>New Jersey's Toxic Legacy: Superfund Sites</h3><p>NJ has the highest number of superfund sites in the U.S., many containing uncontrolled toxic waste.</p></div>
           </a>
           <a class="tile" href="https://somaiyahhafeez.github.io/balochistan/" target="_blank" rel="noopener">
             <div class="tile-img"><img src="images/baloch-missing.png" alt="Balochistan disappearances" loading="lazy"></div>
-            <div class="tile-body">
-              <span class="tag">Scraping, R, data viz</span>
-              <h3>The lesser known war: Balochistan's struggle for its disappeared</h3>
-              <p>Amid decades of enforced disappearances, Baloch families march for justice.</p>
-            </div>
+            <div class="tile-body"><span class="tag">Scraping, R, Data Viz</span><h3>The Lesser Known War: Balochistan's Struggle For Its Disappeared</h3><p>Amid decades of enforced disappearances, Baloch families march for justice.</p></div>
           </a>
           <a class="tile" href="https://somaiyahhafeez.github.io/usaid/" target="_blank" rel="noopener">
             <div class="tile-img"><img src="images/usaid.png" alt="USAID cuts" loading="lazy"></div>
-            <div class="tile-body">
-              <span class="tag">Python, data viz</span>
-              <h3>USAID's uncertain future risks global aid</h3>
-              <p>President Trump's drastic cuts to USAID funding jeopardize global aid, sparking controversy.</p>
-            </div>
+            <div class="tile-body"><span class="tag">Python, Data Visualization</span><h3>USAID's Uncertain Future Risks Global Aid</h3><p>President Trump's drastic cuts to USAID funding jeopardize global aid, sparking controversy.</p></div>
           </a>
           <a class="tile" href="https://somaiyahhafeez.github.io/pahalgam/" target="_blank" rel="noopener">
             <div class="tile-img"><img src="images/map.png" alt="India Pakistan Kashmir conflict" loading="lazy"></div>
-            <div class="tile-body">
-              <span class="tag">Mapbox storytelling, data viz</span>
-              <h3>Rival countries India and Pakistan fought after a terror attack in Kashmir</h3>
-              <p>The flare-up between the nuclear-armed countries was sparked by a deadly attack on Hindu tourists.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- REACH PLC -->
-    <section id="reach">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>More from Reach Plc</h2>
-          <p>Data stories for The Mirror, Irish Star and The Express.</p>
-        </div>
-        <div class="index">
-
-          <a class="row" href="https://www.themirror.com/news/us-news/russia-raked-billions-fuel-export-1933419" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/russia-map.png" alt="Map of Russian LNG imports into Europe" loading="lazy"></div>
-            <div><h3>Russia has raked in billions from fuel export to the EU in 6 months, new analysis finds</h3><p>Data visualization and analysis of Europe's import of Russian LNG.</p></div>
-            <div class="row-meta">Analysis, visualization</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/us-news/iran-war-already-cost-americans-1866456" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/inflation.png" alt="US energy costs during the Iran war" loading="lazy"></div>
-            <div><h3>US-Iran war has already cost Americans an extra $447.19 on energy costs</h3></div>
-            <div class="row-meta">Analysis, visualization</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/us-news/new-york-state-air-quality-1940872" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/AQI.png" alt="New York air quality map" loading="lazy"></div>
-            <div><h3>New York air quality mapped after levels spiked to beyond 'unhealthy' from Canadian wildfires</h3><p>Built an automated data pipeline with GitHub Actions and an API to keep air quality data current in real time.</p></div>
-            <div class="row-meta">Automation, mapping</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/us-news/elon-musk-turns-55-fortune-1904064" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/wealth-inequality.png" alt="Elon Musk wealth versus US income inequality" loading="lazy"></div>
-            <div><h3>As Elon Musk turns 55, his fortune underscores the stark wealth inequality in the U.S.</h3><p>Analyzed Musk's wealth accumulation against U.S. income inequality data, using Python.</p></div>
-            <div class="row-meta">Python, visualization</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/politics/oldest-senate-ever-how-half-1936317" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/senators.png" alt="Age of the 119th Senate" loading="lazy"></div>
-            <div><h3>Is this the oldest Senate ever? How half of the chamber has passed the retirement age</h3><p>Analyzed Congressional age data to show a historic demographic shift in the U.S. Senate.</p></div>
-            <div class="row-meta">Python, visualization</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/us-news/population-hits-340-million-250th-1913985" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/population.png" alt="US population 340 million" loading="lazy"></div>
-            <div><h3>U.S. population hits 340 million ahead of America's 250th birthday</h3><p>Analyzed Census population growth trends timed to the nation's semiquincentennial.</p></div>
-            <div class="row-meta">Analysis</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/politics/interactive-map-snap-benefits-freeze-1475789" target="_blank" rel="noopener">
-            <div class="row-thumb"><video src="images/snap.mov#t=0.5" muted loop playsinline preload="metadata"></video></div>
-            <div><h3>Interactive map shows impact of SNAP benefits freeze</h3><p>Visualizing which states and counties are most affected by benefit freezes.</p></div>
-            <div class="row-meta">Mapping</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/politics/inside-new-york-borough-flipped-1487344" target="_blank" rel="noopener">
-            <div class="row-thumb"><video src="images/nyc-mamdani.mov#t=0.5" muted loop playsinline preload="metadata"></video></div>
-            <div><h3>Inside the New York borough that flipped in elections</h3><p>Voting and demographic data combined to analyze political shifts at borough level.</p></div>
-            <div class="row-meta">Elections</div>
-          </a>
-
-          <a class="row" href="https://www.themirror.com/news/health/state-highest-number-measles-cases-1458229" target="_blank" rel="noopener">
-            <div class="row-thumb contain"><img src="images/measles.png" alt="Measles cases by state" loading="lazy"></div>
-            <div><h3>State reports highest number of measles cases</h3><p>Analyzed CDC data to track outbreak trends and state-level incidence.</p></div>
-            <div class="row-meta">Health data</div>
+            <div class="tile-body"><span class="tag">Mapbox Storytelling, Data Viz</span><h3>Rival Countries India and Pakistan Fought After a Terror Attack in Kashmir</h3><p>The dramatic flare-up between the nuclear countries was sparked by a deadly attack on Hindu tourists.</p></div>
           </a>
         </div>
       </div>
@@ -454,51 +459,42 @@
           <h2>Freelance work</h2>
           <p>Reporting from Pakistan for international publications.</p>
         </div>
-        <div class="index">
-          <a class="row" href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/3984.jpg" alt="Mehr Ghar in Lyari, Karachi" loading="lazy"></div>
-            <div><h3>'House of love': the creative space changing young lives in Karachi</h3><p>In Lyari, a slum notorious for violence, Mehr Ghar offers young people a safe place.</p></div>
-            <div class="row-meta">The Guardian</div>
+        <div class="card-grid cover">
+          <a class="tile" href="https://www.theguardian.com/global-development/2022/feb/24/house-of-love-the-calm-creative-space-changing-young-lives-in-karachi" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/3984.jpg" alt="House of Love Karachi" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">The Guardian</span><h3>'House of love': the creative space changing young lives in Karachi</h3><p>In Lyari, a slum notorious for violence, Mehr Ghar offers young people a safe place.</p></div>
           </a>
-          <a class="row" href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/kontinentalist.png" alt="Balochistan disappearances" loading="lazy"></div>
-            <div><h3>Pakistan's untold war: no justice for Balochistan's disappeared</h3><p>In Pakistan, thousands are abducted by state forces and tortured in unknown locations.</p></div>
-            <div class="row-meta">Kontinentalist</div>
+          <a class="tile" href="https://kontinentalist.com/stories/no-justice-for-balochistan-enforced-disappearances" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/kontinentalist.png" alt="Balochistan disappearances" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">Kontinentalist</span><h3>Pakistan's Untold War: No Justice for Balochistan's Disappeared</h3><p>In Pakistan, thousands are abducted by state forces and tortured in unknown locations.</p></div>
           </a>
-          <a class="row" href="https://www.cjr.org/tow_center/courier-newsroom-spent-big-on-a-meta-ad-blitz-in-october.php" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/courier-newsroom-1.jpg" alt="Courier Newsroom Meta ads" loading="lazy"></div>
-            <div><h3>Courier Newsroom spent big on a Meta ad blitz in October</h3><p>The $6M+ the progressive 'newsroom' spent on Meta lagged only the Trump and Harris campaigns.</p></div>
-            <div class="row-meta">Columbia Journalism Review</div>
+          <a class="tile" href="https://www.cjr.org/tow_center/courier-newsroom-spent-big-on-a-meta-ad-blitz-in-october.php" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/courier-newsroom-1.jpg" alt="Courier Newsroom Meta ads" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">Columbia Journalism Review</span><h3>Courier Newsroom Spent Big on a Meta Ad Blitz in October</h3><p>The $6M+ the progressive 'newsroom' spent on Meta lagged only Trump and Harris campaigns.</p></div>
           </a>
-          <a class="row" href="https://newlinesmag.com/reportage/why-baloch-women-in-pakistan-led-an-unprecedented-march/" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/baloch-women.jpg" alt="Baloch women march" loading="lazy"></div>
-            <div><h3>Why Baloch women in Pakistan led an unprecedented march</h3><p>Protesting against enforced disappearances and extrajudicial killings in a remote province.</p></div>
-            <div class="row-meta">New Lines Magazine</div>
+          <a class="tile" href="https://newlinesmag.com/reportage/why-baloch-women-in-pakistan-led-an-unprecedented-march/" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/baloch-women.jpg" alt="Baloch women march" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">New Lines Magazine</span><h3>Why Baloch Women in Pakistan Led An Unprecedented March</h3><p>Protesting against enforced disappearances and extrajudicial killings in a remote province.</p></div>
           </a>
-          <a class="row" href="https://www.thenewhumanitarian.org/news-feature/2024/05/22/afghans-fear-life-both-sides-durand-line" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/afghan-families-chaman.jpg" alt="Afghan families at the Durand Line" loading="lazy"></div>
-            <div><h3>Afghans fear life on both sides of the Durand Line</h3><p>'I'd rather die in Pakistan than go back to Afghanistan.'</p></div>
-            <div class="row-meta">The New Humanitarian</div>
+          <a class="tile" href="https://www.thenewhumanitarian.org/news-feature/2024/05/22/afghans-fear-life-both-sides-durand-line" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/afghan-families-chaman.jpg" alt="Afghans Durand Line" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">The New Humanitarian</span><h3>Afghans Fear Life on Both Sides of the Durand Line</h3><p>'I'd rather die in Pakistan than go back to Afghanistan.'</p></div>
           </a>
-          <a class="row" href="https://www.thenewhumanitarian.org/analysis/2023/09/19/pakistan-flood-victims-emerging-hunger-hotspots" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/food-insecurity.jpg" alt="Pakistan flood victims and hunger" loading="lazy"></div>
-            <div><h3>For Pakistan flood victims, crises collide to fuel growing hunger</h3><p>'We cook the same vegetables almost every day... and haven't had meat in months.'</p></div>
-            <div class="row-meta">The New Humanitarian</div>
+          <a class="tile" href="https://www.thenewhumanitarian.org/analysis/2023/09/19/pakistan-flood-victims-emerging-hunger-hotspots" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/food-insecurity.jpg" alt="Pakistan flood hunger" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">The New Humanitarian</span><h3>For Pakistan Flood Victims, Crises Collide to Fuel Growing Hunger</h3><p>'We cook the same vegetables almost every day... and haven't had meat in months.'</p></div>
           </a>
-          <a class="row" href="https://newlinesmag.com/spotlight/afghan-refugees-born-in-pakistan-are-leaving-their-lives-for-the-unknown/" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/rahmat-zaman.jpg" alt="Afghan refugees born in Pakistan" loading="lazy"></div>
-            <div><h3>Afghan refugees born in Pakistan are leaving their lives for the unknown</h3><p>As 'unauthorized' refugees are forced to cross the border, many lament being sent to a country they know nothing about.</p></div>
-            <div class="row-meta">New Lines Magazine</div>
+          <a class="tile" href="https://newlinesmag.com/spotlight/afghan-refugees-born-in-pakistan-are-leaving-their-lives-for-the-unknown/" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/rahmat-zaman.jpg" alt="Afghan refugees Pakistan" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">New Lines Magazine</span><h3>Afghan Refugees Born in Pakistan Are Leaving Their Lives for the Unknown</h3><p>As 'unauthorized' refugees are forced to cross the border, many lament being sent to a country they know nothing about.</p></div>
           </a>
-          <a class="row" href="https://dialogue.earth/en/climate/after-floods-pakistan-resilient-housing/" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/climate-housing.jpg" alt="Flood-resilient housing in Pakistan" loading="lazy"></div>
-            <div><h3>After successive floods, Pakistan is forced to consider resilient housing</h3><p>An architect's innovative model for flood-resilient homes shows the way forward.</p></div>
-            <div class="row-meta">The Third Pole</div>
+          <a class="tile" href="https://dialogue.earth/en/climate/after-floods-pakistan-resilient-housing/" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/climate-housing.jpg" alt="Pakistan resilient housing" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">The Third Pole</span><h3>After Successive Floods, Pakistan Is Forced to Consider Resilient Housing</h3><p>An architect's innovative model for flood-resilient homes shows the way forward.</p></div>
           </a>
-          <a class="row" href="https://thediplomat.com/2022/08/pakistans-deadly-floods-are-an-annual-occurrence/" target="_blank" rel="noopener">
-            <div class="row-thumb"><img src="images/thediplomat_2022-08-02-192817.jpg" alt="Flooding in Karachi" loading="lazy"></div>
-            <div><h3>Pakistan's deadly floods are an annual occurrence</h3><p>Why does Karachi flood almost every year during the monsoon season?</p></div>
-            <div class="row-meta">The Diplomat</div>
+          <a class="tile" href="https://thediplomat.com/2022/08/pakistans-deadly-floods-are-an-annual-occurrence/" target="_blank" rel="noopener">
+            <div class="tile-img"><img src="images/thediplomat_2022-08-02-192817.jpg" alt="Pakistan floods Diplomat" loading="lazy"></div>
+            <div class="tile-body"><span class="tag">The Diplomat</span><h3>Pakistan's Deadly Floods Are an Annual Occurrence</h3><p>Why does Karachi flood almost every year during the monsoon season?</p></div>
           </a>
         </div>
       </div>
@@ -536,20 +532,20 @@
           <p>Quick-turn visualizations made on deadline.</p>
         </div>
         <div class="chart-cols">
-          <figure class="chart"><img src="images/senate-119th-120th.jpeg" alt="Ages of senators in the 119th and 120th Senate" loading="lazy"><figcaption>Ages of senators in the 119th and 120th Senate.</figcaption></figure>
-          <figure class="chart"><img src="images/measles-comparison.jpeg" alt="Measles cases in 2026 compared with 2025 and 2000 to 2024" loading="lazy"><figcaption>Measles cases in 2026 compared with 2025 and 2000 to 2024. Source: CDC.</figcaption></figure>
-          <figure class="chart"><img src="images/trump-net-approval.png" alt="Map of Trump's net approval by state" loading="lazy"><figcaption>Trump's net approval by state, a week before the midterms. Source: Civiqs.</figcaption></figure>
-          <figure class="chart"><img src="images/manhole-incidents-monthly.png" alt="NYC manhole incidents by month" loading="lazy"><figcaption>NYC manhole incidents by month, 2005 to July 2026. Source: NYC Open Data.</figcaption></figure>
-          <figure class="chart"><img src="images/measles-map-2026.jpeg" alt="Map of US measles cases by state in 2026" loading="lazy"><figcaption>Measles cases by state in 2026. Source: CDC.</figcaption></figure>
-          <figure class="chart"><img src="images/Charlie-kirk.png" alt="Charlie Kirk locator map" loading="lazy"><figcaption>Locator map.</figcaption></figure>
-          <figure class="chart"><img src="images/Donald-Trump.png" alt="Age of U.S. presidents at inauguration" loading="lazy"><figcaption>Age of U.S. presidents at inauguration.</figcaption></figure>
-          <figure class="chart"><img src="images/ICE-NYC.png" alt="ICE arrests in New York City" loading="lazy"><figcaption>ICE arrests in New York City.</figcaption></figure>
-          <figure class="chart"><img src="images/Texas-measles.png" alt="Texas measles cases" loading="lazy"><figcaption>Texas measles cases.</figcaption></figure>
-          <figure class="chart"><img src="images/executive-orders.png" alt="Executive orders" loading="lazy"><figcaption>Executive orders.</figcaption></figure>
-          <figure class="chart"><img src="images/senators.png" alt="Age of the 119th Senate" loading="lazy"><figcaption>Age of the 119th Senate.</figcaption></figure>
-          <figure class="chart"><img src="images/oil-reserves.png" alt="Oil reserves" loading="lazy"><figcaption>Oil reserves.</figcaption></figure>
-          <figure class="chart"><img src="images/ebola-map.png" alt="Ebola outbreak map" loading="lazy"><figcaption>Ebola outbreak map.</figcaption></figure>
-          <figure class="chart"><img src="images/iran-map.png" alt="Iran map" loading="lazy"><figcaption>Iran map.</figcaption></figure>
+        <figure class="chart"><img src="images/senate-119th-120th.jpeg" alt="Ages of senators in the 119th and 120th Senate" loading="lazy"><figcaption>Ages of senators in the 119th and 120th Senate</figcaption></figure>
+        <figure class="chart"><img src="images/measles-comparison.jpeg" alt="Measles cases in 2026 compared with 2025 and 2000 to 2024" loading="lazy"><figcaption>Measles cases in 2026 compared with 2025 and 2000 to 2024 · CDC</figcaption></figure>
+        <figure class="chart"><img src="images/trump-net-approval.png" alt="Map of Trump's net approval by state" loading="lazy"><figcaption>Trump's net approval by state, a week before the midterms · Civiqs</figcaption></figure>
+        <figure class="chart"><img src="images/manhole-incidents-monthly.png" alt="NYC manhole incidents by month" loading="lazy"><figcaption>NYC manhole incidents by month, 2005 to July 2026 · NYC Open Data</figcaption></figure>
+        <figure class="chart"><img src="images/measles-map-2026.jpeg" alt="Map of US measles cases by state in 2026" loading="lazy"><figcaption>Measles cases by state in 2026 · CDC</figcaption></figure>
+        <figure class="chart"><img src="images/Charlie-kirk.png" alt="Charlie Kirk locator map" loading="lazy"><figcaption>Locator map</figcaption></figure>
+        <figure class="chart"><img src="images/Donald-Trump.png" alt="Age of U.S. presidents at inauguration" loading="lazy"><figcaption>Age of U.S. presidents at inauguration</figcaption></figure>
+        <figure class="chart"><img src="images/ICE-NYC.png" alt="ICE arrests in New York City" loading="lazy"><figcaption>ICE arrests in New York City</figcaption></figure>
+        <figure class="chart"><img src="images/Texas-measles.png" alt="Texas measles cases" loading="lazy"><figcaption>Texas measles cases</figcaption></figure>
+        <figure class="chart"><img src="images/executive-orders.png" alt="Executive orders" loading="lazy"><figcaption>Executive orders</figcaption></figure>
+        <figure class="chart"><img src="images/senators.png" alt="Age of the 119th Senate" loading="lazy"><figcaption>Age of the 119th Senate</figcaption></figure>
+        <figure class="chart"><img src="images/oil-reserves.png" alt="Oil reserves" loading="lazy"><figcaption>Oil reserves</figcaption></figure>
+        <figure class="chart"><img src="images/ebola-map.png" alt="Ebola outbreak map" loading="lazy"><figcaption>Ebola outbreak map</figcaption></figure>
+        <figure class="chart"><img src="images/iran-map.png" alt="Iran map" loading="lazy"><figcaption>Iran map</figcaption></figure>
         </div>
       </div>
     </section>
@@ -557,25 +553,27 @@
     <!-- RECOGNITION -->
     <section id="recognition">
       <div class="wrap">
-        <div class="sec-head">
-          <h2>Recognition</h2>
-        </div>
-        <div class="awards">
+        <div class="sec-head"><h2>Recognition</h2></div>
+        <div class="award-grid">
           <a class="award" href="https://www.thomsonfoundation.org/latest/somaiyah-hafeez-finalist-for-young-journalist-of-the-year-2024/" target="_blank" rel="noopener">
-            <span class="award-year">2024</span>
-            <div><h3>Thomson Foundation: finalist, Young Journalist of the Year</h3><p>Recognized for outstanding journalistic work as an emerging talent in international reporting.</p></div>
+            <span class="award-year">2024</span><span class="award-org">Thomson Foundation</span>
+            <h3>Finalist, Young Journalist of the Year</h3>
+            <p>Recognized for outstanding journalistic work as an emerging talent in international reporting.</p>
           </a>
           <a class="award" href="https://www.iba.edu.pk/iba-karachi-hosts-7th-icrc-humanitarian-reporting-awards.php" target="_blank" rel="noopener">
-            <span class="award-year">2023</span>
-            <div><h3>ICRC–CEJ Humanitarian Reporting Awards</h3><p>Honored for coverage of Pakistan's floods and food insecurity at the 7th Humanitarian Reporting Awards.</p></div>
+            <span class="award-year">2023</span><span class="award-org">ICRC-CEJ</span>
+            <h3>Humanitarian Reporting Award</h3>
+            <p>Honored at the 7th Humanitarian Reporting Awards for coverage of Pakistan's floods and food insecurity.</p>
           </a>
           <a class="award" href="https://thewholestory.solutionsjournalism.org/announcing-the-2023-solutions-journalism-network-award-winners-b047acdc3a26" target="_blank" rel="noopener">
-            <span class="award-year">2023</span> <!-- verify year and award level -->
-            <div><h3>Solutions Journalism Network: honorable mention</h3><p>Recognized for solutions-focused journalism highlighting responses to social problems.</p></div>
+            <span class="award-year">2023</span><span class="award-org">Solutions Journalism Network</span> <!-- verify year and award level -->
+            <h3>Honorable Mention</h3>
+            <p>Recognized for solutions-focused journalism highlighting responses to social problems.</p>
           </a>
           <a class="award" href="https://sopawards.com/the-sopa-awards/awards-finalists/" target="_blank" rel="noopener">
-            <span class="award-year">2025</span>
-            <div><h3>SOPA Awards: honorable mention</h3><p>"A comprehensive explanatory piece that makes great use of graphics to lay out the history of the Balochistan conflict." The judges, on the Balochistan explainer.</p></div>
+            <span class="award-year">2025</span><span class="award-org">SOPA Awards</span>
+            <h3>Honorable Mention</h3>
+            <p>"A comprehensive explanatory piece that makes great use of graphics to lay out the history of the Balochistan conflict." The judges, on the Balochistan explainer.</p>
           </a>
         </div>
       </div>
